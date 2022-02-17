@@ -1,0 +1,23 @@
+@use 'animations' as *
+@use 'resets' as *
+
+body, html, app
+  display: flex
+  flex-direction: column
+  width: 100vw
+  height: 100vh
+  color: #965fa3
+  background-image: url('renderer/assets/images/illustration.svg')
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: 160px 125px
+  scroll-behavior: smooth
+  user-select: none
+  overflow: hidden
+  animation: fadeIn 1s forwards
+  -webkit-app-region: no-drag
+  -webkit-font-smoothing: antialiased
+
+.disabled
+  filter: grayscale(40%)
+  pointer-events: none
