@@ -1,7 +1,7 @@
 const { writeFile } = require('fs/promises')
 const { resolve } = require('path')
 
-const packageJSON = require('./package.json')
+const packageJSON = require('../../../package.json')
 
 async function createPackageJSONDistVersion() {
   const {
@@ -13,7 +13,7 @@ async function createPackageJSONDistVersion() {
   } = packageJSON
 
   const packageJSONDistVersion = {
-    main: main.split('/').reverse()?.[0] || 'index.js',
+    main: main?.split('/')?.reverse()?.[0] || 'index.js',
     ...restOfPackageJSON,
   }
 
