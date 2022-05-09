@@ -8,7 +8,7 @@
   </a>
   <!-- Version -->
   <a href="https://github.com/daltonmenezes/electron-app/releases">
-    <img alt="releases url" src="https://img.shields.io/badge/version%20-1.1.0-1C1E26?style=for-the-badge&labelColor=1C1E26&color=F28BA9">
+    <img alt="releases url" src="https://img.shields.io/badge/version%20-1.2.0-1C1E26?style=for-the-badge&labelColor=1C1E26&color=F28BA9">
   </a>  
   <!-- License -->
   <a href="https://github.com/daltonmenezes/electron-app/blob/main/LICENSE">
