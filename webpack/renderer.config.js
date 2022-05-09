@@ -96,7 +96,9 @@ module.exports = {
     }),
 
     new webpack.DefinePlugin({
-      process: JSON.stringify({}),
+      process: JSON.stringify({
+        platform: process.platform,
+      }),
     }),
 
     new HTMLWebpackPlugin({
