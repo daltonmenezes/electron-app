@@ -7,7 +7,7 @@ import { APP_CONFIG } from '~/app.config'
 
 const { MAIN, TITLE } = APP_CONFIG
 
-export function MainWindow() {
+export async function MainWindow() {
   const window = createWindow({
     id: 'main',
     title: TITLE,

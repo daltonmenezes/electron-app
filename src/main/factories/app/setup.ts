@@ -6,18 +6,18 @@ import installExtension, {
 
 import { PLATFORM, ENVIRONMENT } from 'shared/constants'
 
-export async function makeAppSetup(createWindow: () => BrowserWindow) {
+export async function makeAppSetup(createWindow: () => Promise<BrowserWindow>) {
   if (ENVIRONMENT.IS_DEV) {
     await installExtension(REACT_DEVELOPER_TOOLS, {
       forceDownload: false,
     })
   }
 
-  createWindow()
+  let window = await createWindow()
 
-  app.on('activate', () =>
+  app.on('activate', async () =>
     !BrowserWindow.getAllWindows().length
-      ? createWindow()
+      ? (window = await createWindow())
       : BrowserWindow.getAllWindows()
           ?.reverse()
           .forEach((window) => window.restore())
@@ -31,6 +31,8 @@ export async function makeAppSetup(createWindow: () => BrowserWindow) {
   )
 
   app.on('window-all-closed', () => !PLATFORM.IS_MAC && app.quit())
+
+  return window
 }
 
 PLATFORM.IS_LINUX && app.disableHardwareAcceleration()
