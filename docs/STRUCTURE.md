@@ -18,10 +18,13 @@ A file containing a few of settings of your app.
 src
 ├── main
 │   ├── factories
+│   │   ├── app
+│   │   │   ├── index.ts
+│   │   │   ├── instance.ts
+│   │   │   └── setup.ts
 │   │   ├── index.ts
 │   │   ├── ipcs
 │   │   │   └── register-window-creation.ts
-│   │   ├── setup.ts
 │   │   └── windows
 │   │       └── create.ts
 │   ├── index.ts
