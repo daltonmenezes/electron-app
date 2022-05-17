@@ -56,7 +56,7 @@ export function AppRoutes() {
   )
 }
 ```
-> 🧐 Note: the **myWindow** property must match the id you gave to your window in [src/main](https://github.com/daltonmenezes/electron-app/blob/main/src/main/windows/Main/index.ts#L11)
+> 🧐 Note: the **myWindow** property must match the id you gave to your window in [src/main](https://github.com/daltonmenezes/electron-app/blob/main/src/main/windows/Main/index.ts#L12)
 So, all the routes in their method will have the basename as the window id (the property name), like `myWindow`.
 > ```tsx
 > myWindow: () => <Route path="/" element={<MyScreen />} />,
