@@ -4,15 +4,15 @@
   <br/><br/>
   <!-- Patreon -->
   <a href="https://www.patreon.com/daltonmenezes">
-    <img alt="patreon url" src="https://img.shields.io/badge/support%20on-patreon-1C1E26?style=for-the-badge&labelColor=1C1E26&color=B181F1">
+    <img alt="patreon url" src="https://img.shields.io/badge/support%20on-patreon-1C1E26?style=for-the-badge&labelColor=1C1E26&color=B181F1"/>
   </a>
   <!-- Version -->
   <a href="https://github.com/daltonmenezes/electron-app/releases">
-    <img alt="releases url" src="https://img.shields.io/badge/version%20-1.2.1-1C1E26?style=for-the-badge&labelColor=1C1E26&color=F28BA9">
+     <img alt="releases url" src="https://img.shields.io/github/v/release/daltonmenezes/electron-app?style=for-the-badge&labelColor=1C1E26&color=F28BA9"/>
   </a>  
   <!-- License -->
   <a href="https://github.com/daltonmenezes/electron-app/blob/main/LICENSE">
-    <img alt="license url" src="https://img.shields.io/badge/license%20-MIT-1C1E26?style=for-the-badge&labelColor=1C1E26&color=61ffca">
+    <img alt="license url" src="https://img.shields.io/badge/license%20-MIT-1C1E26?style=for-the-badge&labelColor=1C1E26&color=61ffca"/>
   </a>
 </p>
 
@@ -25,7 +25,7 @@
 # <img src="./docs/images/bullet.svg" width="19" /> Features
 - **Stands out**
   - 🔥 Ready-to-go with a well-thought-out structure
-  - 🚀 Auto reload for main and Hot for renderer process
+  - 🚀 Auto reload for main and **Fast Refresh** for renderer process
   - 🎉 Window and Screen routing included
   - 😎 Bridge already configured
   - 🙀 IPC communication included
@@ -144,7 +144,7 @@ https://user-images.githubusercontent.com/1149845/156939675-5ea0c510-ddd3-4de7-b
 </table>
 
 # Contributing
-> Contributions are always welcome, but always **ask first**, — please — before work on a PR.
+> **Note** Contributions are always welcome, but always **ask first**, — please — before work on a PR.
 
 That said, there's a bunch of ways you can contribute to this project, like by:
 
