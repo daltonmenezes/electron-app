@@ -1,10 +1,11 @@
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const webpack = require('webpack')
 const { resolve } = require('path')
 
 const { sharedOptions } = require('./shared.config')
-const { isModuleAvailable } = require('./utils')
+const { isModuleAvailable, isDev } = require('./utils')
 const { APP_CONFIG } = require('../app.config')
 
 const { FOLDERS, RENDERER } = APP_CONFIG
@@ -14,7 +15,6 @@ const isSassAvailable =
 
 module.exports = {
   target: 'web',
-
   entry: resolve(FOLDERS.ENTRY_POINTS.RENDERER),
 
   ...sharedOptions,
@@ -45,6 +45,26 @@ module.exports = {
   module: {
     rules: [
       ...sharedOptions.module.rules,
+
+      {
+        test: /\.[jt]sx?$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: require.resolve('swc-loader'),
+            options: {
+              jsc: {
+                transform: {
+                  react: {
+                    development: isDev,
+                    refresh: isDev,
+                  },
+                },
+              },
+            },
+          },
+        ],
+      },
 
       {
         test: /\.css$/,
@@ -86,6 +106,8 @@ module.exports = {
   plugins: [
     ...sharedOptions.plugins,
 
+    isDev && new ReactRefreshWebpackPlugin(),
+
     new CopyWebpackPlugin({
       patterns: [
         {
@@ -108,5 +130,5 @@ module.exports = {
     // new webpack.DefinePlugin({
     //   __REACT_DEVTOOLS_GLOBAL_HOOK__: '({ isDisabled: true })',
     // }),
-  ],
+  ].filter(Boolean),
 }

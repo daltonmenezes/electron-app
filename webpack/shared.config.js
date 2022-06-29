@@ -5,9 +5,13 @@ const { resolve } = require('path')
 const { isDev } = require('./utils')
 
 exports.sharedOptions = {
-  mode: process.env.NODE_ENV || 'development',
+  mode: isDev ? 'development' : 'production',
 
   stats: 'minimal',
+
+  performance: {
+    hints: false,
+  },
 
   devtool: isDev ? 'eval-source-map' : 'source-map',
 
