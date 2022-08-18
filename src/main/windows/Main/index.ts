@@ -23,6 +23,7 @@ export async function MainWindow() {
       nodeIntegration: false,
       contextIsolation: true,
       spellcheck: false,
+      sandbox: false,
     },
   })
 
