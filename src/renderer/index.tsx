@@ -1,4 +1,4 @@
-import ReactDom from 'react-dom'
+import ReactDom from 'react-dom/client'
 import React from 'react'
 
 import { WindowStoreProvider } from './store'
@@ -6,11 +6,10 @@ import { AppRoutes } from './routes'
 
 import './styles/globals.sass'
 
-ReactDom.render(
+ReactDom.createRoot(document.querySelector('app') as HTMLElement).render(
   <React.StrictMode>
     <WindowStoreProvider>
       <AppRoutes />
     </WindowStoreProvider>
-  </React.StrictMode>,
-  document.querySelector('app')
+  </React.StrictMode>
 )
