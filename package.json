@@ -42,6 +42,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
+    "@daltonmenezes/electron-devtools-installer": "^1.0.1",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.7",
     "@svgr/webpack": "^6.3.1",
     "@swc/cli": "^0.1.57",
@@ -58,7 +59,6 @@
     "css-loader": "^6.7.1",
     "electron": "^20.0.3",
     "electron-builder": "^23.3.3",
-    "electron-devtools-installer": "^3.2.0",
     "electron-react-devtools": "^0.5.3",
     "eslint": "^8.22.0",
     "eslint-config-prettier": "^8.5.0",
