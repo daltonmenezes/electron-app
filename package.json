@@ -2,7 +2,7 @@
   "displayName": "My Awesome Electron App",
   "name": "my-awesome-electron-app",
   "description": "Your awesome app description",
-  "version": "1.3.1",
+  "version": "1.3.2",
   "main": "./node_modules/.dev-temp-build/main.js",
   "devTempBuildFolder": "./node_modules/.dev-temp-build",
   "devServer": "http://localhost:4927",
