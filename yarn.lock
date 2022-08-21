@@ -1151,6 +1151,16 @@
   dependencies:
     "@jridgewell/trace-mapping" "0.3.9"
 
+"@daltonmenezes/electron-devtools-installer@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@daltonmenezes/electron-devtools-installer/-/electron-devtools-installer-1.0.1.tgz#11fbd8c9beec1c7a5e2a1285c3758ac9b63fbdd8"
+  integrity sha512-h7zeaP3ywyh7ZxsEu9/cJ/QBsQOt9FqRGfi+ADOZ+WXau3XCoE4kgoYsr7QvQyl6bNVzvLRfoJQQV/RN+wv6Ng==
+  dependencies:
+    rimraf "^3.0.2"
+    semver "^7.2.1"
+    tslib "^2.1.0"
+    unzip-crx-3 "^0.2.0"
+
 "@develar/schema-utils@~2.6.5":
   version "2.6.5"
   resolved "https://registry.yarnpkg.com/@develar/schema-utils/-/schema-utils-2.6.5.tgz#3ece22c5838402419a6e0425f85742b961d9b6c6"
@@ -4251,16 +4261,6 @@ electron-builder@^23.3.3:
     read-config-file "6.2.0"
     update-notifier "^5.1.0"
     yargs "^17.0.1"
-
-electron-devtools-installer@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/electron-devtools-installer/-/electron-devtools-installer-3.2.0.tgz#acc48d24eb7033fe5af284a19667e73b78d406d0"
-  integrity sha512-t3UczsYugm4OAbqvdImMCImIMVdFzJAHgbwHpkl5jmfu1izVgUcP/mnrPqJIpEeCK1uZGpt+yHgWEN+9EwoYhQ==
-  dependencies:
-    rimraf "^3.0.2"
-    semver "^7.2.1"
-    tslib "^2.1.0"
-    unzip-crx-3 "^0.2.0"
 
 electron-osx-sign@^0.6.0:
   version "0.6.0"
