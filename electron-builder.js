@@ -1,23 +1,33 @@
-const { APP_CONFIG } = require('./app.config')
+const {
+  main,
+  name,
+  version,
+  resources,
+  description,
+  displayName,
+  author: _author,
+} = require('./package.json')
 
-const { NAME, AUTHOR, TITLE, DESCRIPTION, FOLDERS } = APP_CONFIG
+const { getDevFolder } = require('./bin/utils')
 
-const CURRENT_YEAR = new Date().getFullYear()
-const AUTHOR_IN_KEBAB_CASE = AUTHOR.name.replace(/\s+/g, '-')
-const APP_ID = `com.${AUTHOR_IN_KEBAB_CASE}.${NAME}`.toLowerCase()
+const author = _author?.name ?? _author
+const currentYear = new Date().getFullYear()
+const authorInKebabCase = author.replace(/\s+/g, '-')
+const appId = `com.${authorInKebabCase}.${name}`.toLowerCase()
 
+/** @type {import('electron-builder').Configuration} */
 module.exports = {
-  appId: APP_ID,
-  productName: TITLE,
-  copyright: `Copyright © ${CURRENT_YEAR} — ${AUTHOR.name}`,
+  appId,
+  productName: displayName,
+  copyright: `Copyright © ${currentYear} — ${author}`,
 
   directories: {
-    app: FOLDERS.DEV_TEMP_BUILD,
-    output: 'dist',
+    app: getDevFolder(main),
+    output: `dist/v${version}`,
   },
 
   mac: {
-    icon: `${FOLDERS.RESOURCES}/icons/icon.icns`,
+    icon: `${resources}/build/icons/icon.icns`,
     category: 'public.app-category.utilities',
   },
 
@@ -27,12 +37,12 @@ module.exports = {
 
   linux: {
     category: 'Utilities',
-    synopsis: DESCRIPTION,
+    synopsis: description,
     target: ['AppImage', 'deb', 'pacman', 'freebsd', 'rpm'],
   },
 
   win: {
-    icon: `${FOLDERS.RESOURCES}/icons/icon.ico`,
+    icon: `${resources}/build/icons/icon.ico`,
     target: ['nsis', 'portable', 'zip'],
   },
 }

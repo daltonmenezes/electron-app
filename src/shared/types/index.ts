@@ -1,7 +1,7 @@
 import {
-  BrowserWindowConstructorOptions,
-  IpcMainInvokeEvent,
   BrowserWindow,
+  IpcMainInvokeEvent,
+  BrowserWindowConstructorOptions,
 } from 'electron'
 
 export type BrowserWindowOrNull = Electron.BrowserWindow | null

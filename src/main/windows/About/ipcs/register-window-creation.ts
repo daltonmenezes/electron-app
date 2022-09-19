@@ -6,11 +6,11 @@ import { AboutWindow } from '..'
 
 export function registerAboutWindowCreationByIPC() {
   registerWindowCreationByIPC({
-    channel: IPC.WINDOWS.ABOUT.CREATE,
+    channel: IPC.WINDOWS.ABOUT.CREATE_WINDOW,
     window: AboutWindow,
 
     callback(window, { sender }) {
-      const channel = IPC.WINDOWS.ABOUT.WHEN_CLOSE
+      const channel = IPC.WINDOWS.ABOUT.WHEN_WINDOW_CLOSE
 
       ipcMain.removeHandler(channel)
 

@@ -8,9 +8,11 @@
 
 <h1 align="center"><img src="./images/bullet.svg" width="20" /> Routing</h1>
 
-> Note: We are using **React Router DOM** under-the-hood, check the [docs](https://v5.reactrouter.com/web/guides/quick-start) to get the most out of it
+> **Note**: we are using **React Router DOM** under-the-hood, check the [docs](https://reactrouter.com/en/main) to get the most out of it
 
-At `src/renderer/screens` create a folder named as `My` and inside this folder an `index.tsx` with the following content:
+By default, **Router Dom** will not work properly with Electron and even you make it work in development environment, the production build works different, because in production the protocol will be `"file"` instead `"http"`, that's the reason you should not remove the `src/renderer/routes` folder and you should work with this router adapter!
+
+That said, at `src/renderer/screens` create a folder named as `My` (just for learning purposes) and inside this folder an `index.tsx` with the following content:
 
 ```jsx
 export function MyScreen() {
@@ -56,7 +58,7 @@ export function AppRoutes() {
   )
 }
 ```
-> 🧐 Note: the **myWindow** property must match the id you gave to your window in [src/main](https://github.com/daltonmenezes/electron-app/blob/main/src/main/windows/Main/index.ts#L12)
+> **Note**: the **myWindow** property must match the id you gave to your window in [src/main](https://github.com/daltonmenezes/electron-app/blob/main/src/main/windows/Main/index.ts#L10)
 So, all the routes in their method will have the basename as the window id (the property name), like `myWindow`.
 > ```tsx
 > myWindow: () => <Route path="/" element={<MyScreen />} />,

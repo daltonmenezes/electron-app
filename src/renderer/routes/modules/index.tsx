@@ -21,7 +21,9 @@ export function WindowRouter({ routes }: WindowRouter) {
     {}
   )
 
-  const Route = routesWithLowerCasedKeys[lowerCasedWindowID]
+  const Route = routesWithLowerCasedKeys[
+    lowerCasedWindowID as keyof typeof routesWithLowerCasedKeys
+  ] as () => JSX.Element
 
   if (!Route) return null
 
