@@ -56,10 +56,7 @@ src
 │   │   └── index.ts
 │   ├── index.html
 │   ├── index.tsx
-│   ├── routes
-│   │   ├── index.tsx
-│   │   └── modules
-│   │       └── index.tsx
+│   ├── routes.tsx
 │   ├── screens
 │   │   ├── About
 │   │   │   ├── index.tsx

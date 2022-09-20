@@ -53,4 +53,4 @@ makeAppWithSingleInstanceLock(async () => {
 
 ## <img src="./images/bullet.svg" width="14" /> Creating a Window by IPC
 
-Check the [About](https://github.com/daltonmenezes/electron-app/tree/main/src/main/windows/About) window example and [its usage](https://github.com/daltonmenezes/electron-app/blob/main/src/main/index.ts#L10).
+Check the [About](https://github.com/daltonmenezes/electron-app/tree/main/src/main/windows/About) window example and [its usage](https://github.com/daltonmenezes/electron-app/blob/main/src/main/index.ts#L10) in the main process and in the [preload script](https://github.com/daltonmenezes/electron-app/blob/main/src/preload).
