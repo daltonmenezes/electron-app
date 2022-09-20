@@ -45,6 +45,10 @@ export default defineConfig({
       'process.platform': JSON.stringify(process.platform),
     },
 
+    server: {
+      port: 4927,
+    },
+
     plugins: [tsconfigPaths, reactPlugin()],
     publicDir: resolve(resources, 'public'),
 
