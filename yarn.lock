@@ -27,7 +27,7 @@
   resolved "https://registry.npmjs.org/@babel/compat-data/-/compat-data-7.19.1.tgz"
   integrity sha512-72a9ghR0gnESIa7jBN53U32FOVCEoztyIlKaNoU05zRhEecduGK9L9c3ww7Mp06JiR+0ls0GBPFJQwwtjn9ksg==
 
-"@babel/core@^7.18.13":
+"@babel/core@^7.18.13", "@babel/core@^7.19.1":
   version "7.19.1"
   resolved "https://registry.npmjs.org/@babel/core/-/core-7.19.1.tgz"
   integrity sha512-1H8VgqXme4UXCRv7/Wa1bq7RVymKOzC7znjyFM8KiEzwFqcKUKYNoQef4GhdklgNvoBXyW4gYhuBNCM5o1zImw==
@@ -176,6 +176,13 @@
   version "7.18.6"
   resolved "https://registry.npmjs.org/@babel/plugin-syntax-jsx/-/plugin-syntax-jsx-7.18.6.tgz"
   integrity sha512-6mmljtAedFGTWu2p/8WIORGwy+61PLgOMPOdazc7YoJ9ZCWUyFy3A6CpPkRKLKD1ToAesxX8KGEViAiLo9N+7Q==
+  dependencies:
+    "@babel/helper-plugin-utils" "^7.18.6"
+
+"@babel/plugin-transform-arrow-functions@^7.18.6":
+  version "7.18.6"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-arrow-functions/-/plugin-transform-arrow-functions-7.18.6.tgz#19063fcf8771ec7b31d742339dac62433d0611fe"
+  integrity sha512-9S9X9RUefzrsHZmKMbDXxweEH+YlE8JJEuat9FdvW9Qh1cw7W64jELCtWNkPBPX5En45uy28KGvA/AySqUh8CQ==
   dependencies:
     "@babel/helper-plugin-utils" "^7.18.6"
 
@@ -1812,11 +1819,13 @@ electron-to-chromium@^1.4.251:
   resolved "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.4.254.tgz"
   integrity sha512-Sh/7YsHqQYkA6ZHuHMy24e6TE4eX6KZVsZb9E/DvU1nQRIrH4BflO/4k+83tfdYvDl+MObvlqHPRICzEdC9c6Q==
 
-electron-vite@^1.0.8:
-  version "1.0.8"
-  resolved "https://registry.npmjs.org/electron-vite/-/electron-vite-1.0.8.tgz"
-  integrity sha512-NxvXf88lUcUbULAq31QBRht/nMUqkXGIIJLmZKytmGMC2ZZf1NxLWsMG9N0/sg1xG+HxHZ1eeuEI1j74U5Vsrw==
+electron-vite@^1.0.9:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/electron-vite/-/electron-vite-1.0.9.tgz#4656823a56472777dc584b920e1e8729ea3bdce5"
+  integrity sha512-UB+l0xlJNTMVOD3wdK+8Tqv/S0eHiiFKPaA72DrHtEOvOQdjC6YGjTW7d29Yen+VJLtP3Ccef6TG07uZjOihsA==
   dependencies:
+    "@babel/core" "^7.19.1"
+    "@babel/plugin-transform-arrow-functions" "^7.18.6"
     cac "^6.7.12"
     esbuild "^0.14.54"
     picocolors "^1.0.0"

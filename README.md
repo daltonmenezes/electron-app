@@ -30,6 +30,7 @@
   - 😎 Preload (context bridge) already configured
   - 🙀 IPC communication example included
   - 🔮 GitHub Action releases with `Windows`, `Mac` and `Linux` binaries
+  - 🔒 Source Code Protection support
   - 🍪 Absolute paths support
 - **Technologies**:
   - 🔋 Electron
@@ -99,6 +100,41 @@ Then, enter the new version of your app, so it will produce the following binari
 In this process, the action will be triggered and the previous command will open the `releases` and `actions` page in your browser. When the action is finished, you can click in the `releases` page and refresh it to see the draft release with the binaries, so you can edit it and release it for your users.
 
 https://user-images.githubusercontent.com/1149845/156939675-5ea0c510-ddd3-4de7-b293-87d3697bd1a8.mp4
+
+# <img src="./docs/images/bullet.svg" width="14" /> Source Code Protection
+> This process is done via [v8 bytecode compilation](https://nodejs.org/api/vm.html#vm_script_createcacheddata), to get more knowledge about it, please, [check the Electron Vite docs](https://evite.netlify.app/guide/source-code-protection.html).
+
+Use the `bytecodePlugin` from `electron-vite` to enable it in the **electron.vite.config.ts**:
+
+```ts
+import { defineConfig, bytecodePlugin } from 'electron-vite'
+
+export default defineConfig({
+  main: {
+    plugins: [tsconfigPaths, bytecodePlugin()]
+  },
+
+  preload: {
+    // Note: you will get the following warning using bytecodePlugin in the preload script in production build: "The vm module of Node.js is deprecated in the renderer process and will be removed", is up to you to keep bytecodePlugin here. Also, keep following the Electron Vite docs for more updates about this plugin!
+    plugins: [tsconfigPaths, bytecodePlugin()]
+  },
+
+  renderer: {
+    // ...
+  }
+})
+```
+Also, `sandbox` should be `false` in `webPreferences` for the windows you are using a preload script like:
+```ts
+const window = createWindow({
+  id: 'main',
+
+  webPreferences: {
+    preload: join(__dirname, '../preload/index.js'),
+    sandbox: false,
+  },
+})
+```
 
 # <img src="./docs/images/bullet.svg" width="19" /> Documents
 <table >
