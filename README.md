@@ -150,7 +150,7 @@ That said, there's a bunch of ways you can contribute to this project, like by:
 - :beetle: Reporting a bug
 - :page_facing_up: Improving this documentation
 - :rotating_light: Sharing this project and recommending it to your friends
-- :dollar: Supporting this project on Patreon
+- :dollar: Supporting this project on GitHub Sponsors or Patreon
 - :star2: Giving a star on this repository
 
 # License
