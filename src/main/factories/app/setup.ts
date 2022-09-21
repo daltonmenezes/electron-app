@@ -5,6 +5,7 @@ import installExtension, {
 } from '@daltonmenezes/electron-devtools-installer'
 
 import { PLATFORM, ENVIRONMENT } from 'shared/constants'
+import { makeAppId } from 'shared/utils'
 
 export async function makeAppSetup(createWindow: () => Promise<BrowserWindow>) {
   if (ENVIRONMENT.IS_DEV) {
@@ -37,7 +38,7 @@ export async function makeAppSetup(createWindow: () => Promise<BrowserWindow>) {
 
 PLATFORM.IS_LINUX && app.disableHardwareAcceleration()
 
-app.commandLine.appendSwitch('force-color-profile', 'srgb')
+PLATFORM.IS_WINDOWS &&
+  app.setAppUserModelId(ENVIRONMENT.IS_DEV ? process.execPath : makeAppId())
 
-process.env.ELECTRON_DISABLE_SECURITY_WARNINGS = 'true'
-delete process.env.ELECTRON_ENABLE_SECURITY_WARNINGS
+app.commandLine.appendSwitch('force-color-profile', 'srgb')

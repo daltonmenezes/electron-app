@@ -13,7 +13,11 @@ export function useWindowStore() {
   return useContext(WindowStoreContext)
 }
 
-export function WindowStoreProvider({ children }) {
+export function WindowStoreProvider({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   const [state, setState] = useState({
     about: { isOpen: false, setAboutWindowState },
   })

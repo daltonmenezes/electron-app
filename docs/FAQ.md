@@ -10,10 +10,9 @@
 
 ## 🤔 How can I remove SASS support?
 ```bash
-yarn remove sass sass-loader  
+yarn remove sass 
 ```
 
-## 🤔 I don't like a very opinionated structure, how can I do this myself?
-1. Delete all `src` folder content
-
-2. In the **app.config.js** in the root folder, look for **ENTRY_POINTS**, which are the only files and path you should have to point to start, but you can change it, or if you don't want the **BRIDGE**, you can remove it and in the **webpack/main.config.js**, remove the **bridge** line in the **entry** property.
+## 🤔 How can I solve the `electron-builder install-app-deps Windows Script Host` error?
+If you are trying to use this boilerplate with npm instead yarn on Windows, you will get that error related to `electron-builder install-app-deps`, so:
+- Take a look at [this comment](https://github.com/ficonsulting/RInno/issues/44#issuecomment-992299431) to solve it!

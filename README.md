@@ -1,6 +1,6 @@
 <h1 align="center"><img src="./docs/images/bullet.svg" width="19" /> Electron App</h1>
 
-<p align="center">💅 A <strong>ready-to-go</strong> with a <strong>well-thought-out structure</strong> Electron app boilerplate with ReactJS, TypeScript, CSS / SASS modules, SWC, Eslint, Prettier, <strong>GitHub Action releases</strong> and more.
+<p align="center">💅 A <strong>fast</strong> and <strong>ready-to-go</strong> with a <strong>well-thought-out structure</strong> Electron app boilerplate with ReactJS, TypeScript, CSS / SASS modules, Electron Vite, Eslint, Prettier, <strong>GitHub Action releases</strong> and more.
   <br/><br/>
   <!-- Patreon -->
   <a href="https://www.patreon.com/daltonmenezes">
@@ -24,21 +24,20 @@
 
 # <img src="./docs/images/bullet.svg" width="19" /> Features
 - **Stands out**
-  - 🔥 Ready-to-go with a well-thought-out structure
+  - 🔥 Fast and Ready-to-go with a well-thought-out structure
   - 🚀 Auto reload for main and **Fast Refresh** for renderer process
   - 🎉 Window and Screen routing included
-  - 😎 Bridge already configured
-  - 🙀 IPC communication included
+  - 😎 Preload (context bridge) already configured
+  - 🙀 IPC communication example included
   - 🔮 GitHub Action releases with `Windows`, `Mac` and `Linux` binaries
-  - 🍪 Absolute paths supported
+  - 🍪 Absolute paths support
 - **Technologies**:
   - 🔋 Electron
   - 🔥 ReactJS
   - 🌎 React Router DOM
   - 🧐 React Developer Tools
   - 💙 TypeScript
-  - 📦 Webpack
-  - ⚡️ SWC as compiler
+  - 📦 Electron Vite
   - ✨ CSS / SASS modules
   - 💫 Eslint / Prettier / EditorConfig / Husky / lint-staged / Commitlint
   - 📦 Electron Builder
@@ -58,32 +57,32 @@ That done, just run the project with the following command:
 yarn dev
 ```
 
-Now, look at the **app.config.js** file in the root directory, you should update some of that settings with your project branding, also you may notice some of that settings comes from the **package.json**, update it too as you need.
+Now, look at the **package.json** file in the root directory, you should update some of that settings with your project branding.
 
 # <img src="./docs/images/bullet.svg" width="14" /> Distribution
 
 ### For all platforms
 
-> [Check Electron Builder docs](https://www.electron.build/cli)
+> **Note**: Check [Electron Builder docs](https://www.electron.build/cli) for more knowledge
 
 ```
-yarn dist
+yarn build
 ```
 
 ### For a specific one
 
 ```bash
-yarn dist --mac
+yarn build --mac
 # OR
-yarn dist --win
+yarn build --win
 # OR
-yarn dist --linux
+yarn build --linux
 ```
 
-The compiled apps will be available on the `dist` folder.
+The builded apps will be available on the `dist` folder.
 
 # <img src="./docs/images/bullet.svg" width="14" /> Releasing
-> 🔥 Note: To be able to perform `auto-updates` you will need a `code signed app`, for this purpose you will need to configure it by yourself, so check the [electron-builder](https://www.electron.build/code-signing) and [action-electron-builder](https://github.com/samuelmeuli/action-electron-builder#code-signing) docs please to get know how to do this.
+> **Note**: to be able to perform `auto-updates` you will need a `code signed app`, for this purpose you will need to configure it by yourself, so check the [electron-builder](https://www.electron.build/code-signing) and [action-electron-builder](https://github.com/samuelmeuli/action-electron-builder#code-signing) docs please to get know how to do this.
 
 To release your app on a GitHub release with `Windows`, `Mac` and `Linux` binaries, you can perform the following commands:
 
@@ -144,7 +143,7 @@ https://user-images.githubusercontent.com/1149845/156939675-5ea0c510-ddd3-4de7-b
 </table>
 
 # Contributing
-> **Note** Contributions are always welcome, but always **ask first**, — please — before work on a PR.
+> **Note**: contributions are always welcome, but always **ask first**, — please — before work on a PR.
 
 That said, there's a bunch of ways you can contribute to this project, like by:
 

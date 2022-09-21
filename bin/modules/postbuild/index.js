@@ -2,24 +2,19 @@ const { writeFile } = require('fs/promises')
 const { resolve } = require('path')
 
 const packageJSON = require('../../../package.json')
+const { getDevFolder } = require('../../utils')
 
 async function createPackageJSONDistVersion() {
-  const {
-    main,
-    scripts,
-    devDependencies,
-    devTempBuildFolder,
-    ...restOfPackageJSON
-  } = packageJSON
+  const { main, scripts, resources, devDependencies, ...rest } = packageJSON
 
   const packageJSONDistVersion = {
-    main: main?.split('/')?.reverse()?.[0] || 'index.js',
-    ...restOfPackageJSON,
+    main: './main/index.js',
+    ...rest,
   }
 
   try {
     await writeFile(
-      resolve(devTempBuildFolder, 'package.json'),
+      resolve(getDevFolder(main), 'package.json'),
       JSON.stringify(packageJSONDistVersion, null, 2)
     )
   } catch ({ message }) {

@@ -8,10 +8,6 @@
 
 <h1 align="center"><img src="./images/bullet.svg" width="20" /> Structure Overview</h1>
 
-## app.config.js
-
-A file containing a few of settings of your app.
-
 ## src
 <details>
   <pre>
@@ -37,17 +33,16 @@ src
 │       ├── Main
 │       │   └── index.ts
 │       └── index.ts
+├── preload
+│   ├── index.ts
+│   └── ipcs
+│       ├── index.ts
+│       └── windows
+│           ├── about
+│           │   ├── create.ts
+│           │   └── when-close.ts
+│           └── index.ts
 ├── renderer
-│   ├── assets
-│   │   └── images
-│   │       └── illustration.svg
-│   ├── bridge
-│   │   ├── index.ts
-│   │   └── ipcs
-│   │       ├── about-window
-│   │       │   ├── create.ts
-│   │       │   └── when-close.ts
-│   │       └── index.ts
 │   ├── components
 │   │   ├── Button
 │   │   │   ├── index.tsx
@@ -61,10 +56,7 @@ src
 │   │   └── index.ts
 │   ├── index.html
 │   ├── index.tsx
-│   ├── routes
-│   │   ├── index.tsx
-│   │   └── modules
-│   │       └── index.tsx
+│   ├── routes.tsx
 │   ├── screens
 │   │   ├── About
 │   │   │   ├── index.tsx
@@ -74,16 +66,19 @@ src
 │   │   ├── Main
 │   │   │   └── index.tsx
 │   │   └── index.ts
-│   ├── store
-│   │   └── index.tsx
+│   └── store
+│       └── index.tsx
+├── resources
+│   ├── build
+│   │   └── icons
+│   │       ├── icon.icns
+│   │       └── icon.ico
+│   ├── public
+│   │   └── illustration.svg
 │   └── styles
 │       ├── animations.sass
 │       ├── globals.sass
 │       └── resets.sass
-├── resources
-│   └── icons
-│       ├── icon.icns
-│       └── icon.ico
 └── shared
     ├── constants
     │   ├── environment.ts
@@ -91,7 +86,9 @@ src
     │   ├── ipc.ts
     │   └── platform.ts
     ├── index.ts
-    └── types
+    ├── types
+    │   └── index.ts
+    └── utils
         └── index.ts
   </pre>
 </details>
@@ -104,12 +101,15 @@ A folder containing the main process files and folders.
 
 A folder containing the renderer process files and folders. ReactJS lives here!
 
+## preload
+A folder containing the preload script that expose the API connection between main and renderer world by IPC in the context bridge.
+
 ## resources
 
-A folder containing assets for the build process like icons.
+A folder containing global styles, public assets and assets for the build process like icons.
 
-> Note: all the content inside this folder will be copied to the packaged version.
+> **Note**: all the content inside the **public** folder will be copied to the builded version as its.
 
 ## shared
 
-A folder containing shareable data between the processes like constants, types, etc.
+A folder containing shareable data between the processes like constants, utils, types, etc.

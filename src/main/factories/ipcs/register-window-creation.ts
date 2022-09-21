@@ -14,8 +14,8 @@ export function registerWindowCreationByIPC({
 
     window = createWindow()
 
-    window.on('closed', () => (window = null))
+    window!.on('closed', () => (window = null))
 
-    callback && callback(window, event)
+    callback && callback(window!, event)
   })
 }

@@ -3,31 +3,33 @@ import { join } from 'path'
 
 import { ENVIRONMENT } from 'shared/constants'
 import { createWindow } from 'main/factories'
-import { APP_CONFIG } from '~/app.config'
-
-const { MAIN, TITLE } = APP_CONFIG
+import { displayName } from '~/package.json'
 
 export async function MainWindow() {
   const window = createWindow({
     id: 'main',
-    title: TITLE,
-    width: MAIN.WINDOW.WIDTH,
-    height: MAIN.WINDOW.HEIGHT,
+    title: displayName,
+    width: 700,
+    height: 473,
+    show: false,
     center: true,
     movable: true,
     resizable: false,
     alwaysOnTop: true,
+    autoHideMenuBar: true,
 
     webPreferences: {
-      preload: join(__dirname, 'bridge.js'),
-      nodeIntegration: false,
-      contextIsolation: true,
-      spellcheck: false,
-      sandbox: false,
+      preload: join(__dirname, '../preload/index.js'),
     },
   })
 
-  ENVIRONMENT.IS_DEV && window.webContents.openDevTools({ mode: 'detach' })
+  window.webContents.on('did-finish-load', () => {
+    if (ENVIRONMENT.IS_DEV) {
+      window.webContents.openDevTools({ mode: 'detach' })
+    }
+
+    window.show()
+  })
 
   window.on('close', () =>
     BrowserWindow.getAllWindows().forEach((window) => window.destroy())

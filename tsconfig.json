@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "strict": false,
+    "strict": true,
     "target": "esnext",
     "lib": [
       "esnext",
@@ -31,14 +31,10 @@
   },
   "include": [
     "src",
-    "globals.d.ts",
+    "electron.vite.config.*",
+    "index.d.ts",
   ],
   "exclude": [
     "node_modules"
-  ],
-  "plugins": [
-    {
-      "name": "typescript-plugin-css-modules"
-    }
   ],
 }

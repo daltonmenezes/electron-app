@@ -4,9 +4,10 @@ import { useEffect } from 'react'
 import { Container, Heading, Button } from 'renderer/components'
 import { useWindowStore } from 'renderer/store'
 
-export function MainScreen() {
-  const { App } = window // The "App" comes from the bridge
+// The "App" comes from the context bridge in preload/index.ts
+const { App } = window
 
+export function MainScreen() {
   const navigate = useNavigate()
   const store = useWindowStore().about
 
