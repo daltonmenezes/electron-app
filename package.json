@@ -2,7 +2,7 @@
   "displayName": "My Awesome Electron App",
   "name": "my-awesome-electron-app",
   "description": "Your awesome app description",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "main": "./node_modules/.dev/main/index.js",
   "resources": "src/resources",
   "author": {
