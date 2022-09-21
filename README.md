@@ -34,7 +34,7 @@
 - **Technologies**:
   - 🔋 Electron
   - 🔥 ReactJS
-  - 🌎 React Router DOM
+  - 🌎 React Router DOM and Electron Router DOM
   - 🧐 React Developer Tools
   - 💙 TypeScript
   - 📦 Electron Vite
