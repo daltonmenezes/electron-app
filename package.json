@@ -24,27 +24,27 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "electron-router-dom": "^1.0.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.3.0",
-    "electron-router-dom": "^1.0.1"
+    "react-router-dom": "^6.4.3"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.0.3",
-    "@commitlint/config-conventional": "^17.0.3",
+    "@commitlint/cli": "^17.2.0",
+    "@commitlint/config-conventional": "^17.2.0",
     "@daltonmenezes/electron-devtools-installer": "^1.0.1",
-    "@types/node": "^18.7.18",
-    "@types/react": "^18.0.20",
-    "@types/react-dom": "^18.0.6",
-    "@typescript-eslint/eslint-plugin": "^5.33.1",
-    "@typescript-eslint/parser": "^5.33.1",
-    "@vitejs/plugin-react": "^2.1.0",
+    "@types/node": "^18.11.9",
+    "@types/react": "^18.0.24",
+    "@types/react-dom": "^18.0.8",
+    "@typescript-eslint/eslint-plugin": "^5.42.0",
+    "@typescript-eslint/parser": "^5.42.0",
+    "@vitejs/plugin-react": "^2.2.0",
     "cross-env": "^7.0.3",
-    "electron": "^20.1.4",
-    "electron-builder": "^23.3.3",
+    "electron": "^21.2.2",
+    "electron-builder": "^23.6.0",
     "electron-react-devtools": "^0.5.3",
-    "electron-vite": "^1.0.9",
-    "eslint": "^8.22.0",
+    "electron-vite": "^1.0.12",
+    "eslint": "^8.26.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^4.2.1",
@@ -54,11 +54,11 @@
     "open": "^8.4.0",
     "prettier": "^2.7.1",
     "rollup-plugin-inject-process-env": "^1.3.1",
-    "sass": "^1.54.9",
-    "semver": "^7.3.7",
-    "typescript": "^4.8.3",
-    "vite": "^3.1.2",
-    "vite-tsconfig-paths": "^3.5.0"
+    "sass": "^1.55.0",
+    "semver": "^7.3.8",
+    "typescript": "^4.8.4",
+    "vite": "^3.2.2",
+    "vite-tsconfig-paths": "^3.5.2"
   },
   "lint-staged": {
     "*.{js,ts}": [
