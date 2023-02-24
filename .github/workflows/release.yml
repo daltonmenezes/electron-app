@@ -18,7 +18,7 @@ jobs:
       - name: Install Node.js, NPM and Yarn
         uses: actions/setup-node@v2
         with:
-          node-version: 16
+          node-version: 18
 
       - name: apt-update
         if: startsWith(matrix.os, 'ubuntu-latest')
@@ -33,7 +33,7 @@ jobs:
         run: sudo apt-get install libarchive-tools rpm
 
       - name: Release Electron app
-        uses: samuelmeuli/action-electron-builder@v1
+        uses: coparse-inc/action-electron-builder@v1.0.0
         with:
           # GitHub token, automatically provided to the action
           # (No need to define this secret in the repo settings)

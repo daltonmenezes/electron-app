@@ -1,5 +1,5 @@
+import { defineConfig, externalizeDepsPlugin } from 'electron-vite'
 import { resolve, normalize, dirname } from 'path'
-import { defineConfig } from 'electron-vite'
 
 import injectProcessEnvPlugin from 'rollup-plugin-inject-process-env'
 import tsconfigPathsPlugin from 'vite-tsconfig-paths'
@@ -16,7 +16,7 @@ const tsconfigPaths = tsconfigPathsPlugin({
 
 export default defineConfig({
   main: {
-    plugins: [tsconfigPaths],
+    plugins: [tsconfigPaths, externalizeDepsPlugin()],
 
     build: {
       rollupOptions: {
@@ -32,7 +32,7 @@ export default defineConfig({
   },
 
   preload: {
-    plugins: [tsconfigPaths],
+    plugins: [tsconfigPaths, externalizeDepsPlugin()],
 
     build: {
       outDir: resolve(devPath, 'preload'),
