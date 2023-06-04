@@ -44,6 +44,10 @@
   - 📦 Electron Builder
   - 🔮 action-electron-builder
 
+<br/>
+
+> :warning: If **Windows 7** and **8** support is important for your project, you should know that Electron in a version greater than 22x no longer supports it. You can read more about it [here](https://www.electronjs.org/docs/latest/breaking-changes#removed-windows-7--8--81-support). Therefore, you must downgrade Electron to the version cited in this context!
+
 # <img src="./docs/images/bullet.svg" width="19" /> Usage
 
 First, install the dependencies by running on the terminal:
