@@ -40,7 +40,7 @@
     "@vitejs/plugin-react": "^4.0.4",
     "cross-env": "^7.0.3",
     "electron": "^25.3.2",
-    "electron-builder": "^24.6.3",
+    "electron-builder": "^23.6.0",
     "electron-extension-installer": "^1.2.0",
     "electron-vite": "^1.0.27",
     "eslint": "^8.46.0",
