@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: black;
+  --color-secondary: hsl(0, 0%, 100%);
+  --color-muted: #99a1af;
+}
+
+html, body {
+  background-size: cover;
+  background-color: var(--color-primary);
+  background-position: center;
+  background-image: url('/illustration.svg');
+  background-position: 160px 125px;
+  background-repeat: no-repeat;
+
+  user-select: none;
+  scroll-behavior: smooth;
+  -webkit-app-region: no-drag;
+  -webkit-font-smoothing: antialiased;
+}
