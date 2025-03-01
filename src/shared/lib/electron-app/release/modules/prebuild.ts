@@ -1,6 +1,7 @@
 import { writeFile } from 'node:fs/promises'
 import { resolve } from 'node:path'
 
+import trustedDependencies from '../../../../../../trusted-dependencies-scripts.json'
 import packageJSON from '../../../../../../package.json'
 import { getDevFolder } from '../utils/path'
 
@@ -13,10 +14,17 @@ async function createPackageJSONDistVersion() {
   }
 
   try {
-    await writeFile(
-      resolve(getDevFolder(main), 'package.json'),
-      JSON.stringify(packageJSONDistVersion, null, 2)
-    )
+    await Promise.all([
+      writeFile(
+        resolve(getDevFolder(main), 'package.json'),
+        JSON.stringify(packageJSONDistVersion, null, 2)
+      ),
+
+      writeFile(
+        resolve(getDevFolder(main), packageJSON.pnpm.onlyBuiltDependenciesFile),
+        JSON.stringify(trustedDependencies, null, 2)
+      ),
+    ])
     // biome-ignore lint/suspicious/noExplicitAny: <explanation>
   } catch ({ message }: any) {
     console.log(`

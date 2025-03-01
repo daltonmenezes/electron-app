@@ -59,6 +59,6 @@
     ]
   },
   "pnpm": {
-    "onlyBuiltDependenciesFile": "trusted-dependencies-scripts.json"
+    "onlyBuiltDependenciesFile": "./trusted-dependencies-scripts.json"
   }
 }
