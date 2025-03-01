@@ -1,6 +1,6 @@
 <h1 align="center"><img src="./docs/images/bullet.svg" width="19" /> Electron App</h1>
 
-<p align="center">💅 The Electron app boilerplate with ReactJS, TypeScript, TailwindCSS, Electron Vite, Biome, <strong>GitHub Action releases</strong> and more.
+<p align="center">💅 The Electron app boilerplate with React v19, TypeScript v5, Tailwind v4, Electron Vite, Biome, <strong>GitHub Action releases</strong> and more.
   <br/><br/>
    <!-- GitHub -->
   <a href="https://github.com/sponsors/daltonmenezes">
@@ -38,12 +38,12 @@
   - 🍪 Absolute paths support
 - **Technologies**:
   - 🔋 Electron
-  - 🔥 ReactJS
-  - 🌎 React Router DOM and Electron Router DOM
+  - 🔥 ReactJS v19
+  - 🌎 React Router DOM v7 and Electron Router DOM v2
   - 🧐 React Developer Tools
-  - 💙 TypeScript
+  - 💙 TypeScript v5
   - 📦 Electron Vite
-  - ✨ TailwindCSS
+  - ✨ TailwindCSS v4
   - 💫 Biome / EditorConfig / Husky / lint-staged
   - 📦 Electron Builder
   - 🔮 action-electron-builder
