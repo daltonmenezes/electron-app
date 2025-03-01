@@ -41,11 +41,12 @@
   - 🔥 ReactJS v19
   - 🌎 React Router DOM v7 and Electron Router DOM v2
   - 🧐 React Developer Tools
+  - 🔍 Code inspector (holding <kbd title="Alt">`Alt`</kbd> or <kbd title="Alt">`Option`</kbd> key on DOM element and clicking on it)
   - 💙 TypeScript v5
   - 📦 Electron Vite
   - ✨ TailwindCSS v4
   - 🎨 shadcn/ui
-  - 🍦 lucide-icons
+  - 🍦 lucide-icons
   - 💫 Biome / EditorConfig / Husky / lint-staged
   - 📦 Electron Builder
   - 🔮 action-electron-builder

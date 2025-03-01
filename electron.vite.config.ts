@@ -1,4 +1,5 @@
 import { defineConfig, externalizeDepsPlugin } from 'electron-vite'
+import { codeInspectorPlugin } from 'code-inspector-plugin'
 import { resolve, normalize, dirname } from 'node:path'
 import tailwindcss from '@tailwindcss/vite'
 
@@ -51,7 +52,18 @@ export default defineConfig({
       port: settings.port,
     },
 
-    plugins: [tsconfigPaths, tailwindcss(), reactPlugin()],
+    plugins: [
+      tsconfigPaths,
+      tailwindcss(),
+      reactPlugin(),
+
+      codeInspectorPlugin({
+        bundler: 'vite',
+        hotKeys: ['altKey'],
+        hideConsole: true,
+      }),
+    ],
+
     publicDir: resolve(resources, 'public'),
 
     build: {
