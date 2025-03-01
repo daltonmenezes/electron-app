@@ -1,18 +1,22 @@
 <h1 align="center"><img src="./docs/images/bullet.svg" width="19" /> Electron App</h1>
 
-<p align="center">💅 A <strong>fast</strong> and <strong>ready-to-go</strong> with a <strong>well-thought-out structure</strong> Electron app boilerplate with ReactJS, TypeScript, CSS / SASS modules, Electron Vite, Eslint, Prettier, <strong>GitHub Action releases</strong> and more.
+<p align="center">💅 The Electron app boilerplate with ReactJS, TypeScript, TailwindCSS, Electron Vite, Biome, <strong>GitHub Action releases</strong> and more.
   <br/><br/>
+   <!-- GitHub -->
+  <a href="https://github.com/sponsors/daltonmenezes">
+    <img alt="github url" src="https://img.shields.io/badge/support%20on-github-1C1E26?style=for-the-badge&labelColor=1C1E26&color=F28BA9"/>
+  </a>
   <!-- Patreon -->
   <a href="https://www.patreon.com/daltonmenezes">
     <img alt="patreon url" src="https://img.shields.io/badge/support%20on-patreon-1C1E26?style=for-the-badge&labelColor=1C1E26&color=B181F1"/>
   </a>
   <!-- Version -->
   <a href="https://github.com/daltonmenezes/electron-app/releases">
-     <img alt="releases url" src="https://img.shields.io/github/v/release/daltonmenezes/electron-app?style=for-the-badge&labelColor=1C1E26&color=F28BA9"/>
+     <img alt="releases url" src="https://img.shields.io/github/v/release/daltonmenezes/electron-app?style=for-the-badge&labelColor=1C1E26&color=61ffca"/>
   </a>  
   <!-- License -->
   <a href="https://github.com/daltonmenezes/electron-app/blob/main/LICENSE">
-    <img alt="license url" src="https://img.shields.io/badge/license%20-MIT-1C1E26?style=for-the-badge&labelColor=1C1E26&color=61ffca"/>
+    <img alt="license url" src="https://img.shields.io/badge/license%20-MIT-1C1E26?style=for-the-badge&labelColor=1C1E26&color=F28BA9"/>
   </a>
 </p>
 
@@ -26,9 +30,9 @@
 - **Stands out**
   - 🔥 Fast and Ready-to-go with a well-thought-out structure
   - 🚀 Auto reload for main and **Fast Refresh** for renderer process
-  - 🎉 Window and Screen routing included
+  - 🎉 Window/Screen routing included
   - 😎 Preload (context bridge) already configured
-  - 🙀 IPC communication example included
+  <!-- - 🙀 IPC communication example included -->
   - 🔮 GitHub Action releases with `Windows`, `Mac` and `Linux` binaries
   - 🔒 Source Code Protection support
   - 🍪 Absolute paths support
@@ -39,30 +43,30 @@
   - 🧐 React Developer Tools
   - 💙 TypeScript
   - 📦 Electron Vite
-  - ✨ CSS / SASS modules
-  - 💫 Eslint / Prettier / EditorConfig / Husky / lint-staged / Commitlint
+  - ✨ TailwindCSS
+  - 💫 Biome / EditorConfig / Husky / lint-staged / Commitlint
   - 📦 Electron Builder
   - 🔮 action-electron-builder
 
 <br/>
 
-> :warning: If **Windows 7** and **8** support is important for your project, you should know that Electron in a version greater than 22x no longer supports it. You can read more about it [here](https://www.electronjs.org/docs/latest/breaking-changes#removed-windows-7--8--81-support). Therefore, you must downgrade Electron to the version cited in this context!
+> :warning: If **Windows 7** and **8** support is important for your project, you should know that Electron in a version greater than 22x no longer supports it. You can read more about it [here](https://www.electronjs.org/docs/latest/breaking-changes#removed-windows-7--8--81-support). Therefore, you must downgrade Electron to 22x version if it's important for you!
 
-# <img src="./docs/images/bullet.svg" width="19" /> Usage
-
-First, install the dependencies by running on the terminal:
-
+# <img src="./docs/images/bullet.svg" width="19" /> Installation
+```bash
+npx degit daltonmenezes/electron-app project_name
 ```
-yarn
-```
-
-That done, just run the project with the following command:
-
-```
-yarn dev
+```bash
+cd project_name
+pnpm install
+pnpm dev
 ```
 
 Now, look at the **package.json** file in the root directory, you should update some of that settings with your project branding.
+
+# <img src="./docs/images/bullet.svg" width="14" /> Adding new dependencies
+For security reasons, **pnpm** has the [onlyBuiltDependenciesFile](https://pnpm.io/package_json#pnpmonlybuiltdependenciesfile) property where only 
+dependencies listed in the [trusted-dependencies-scripts.json](./trusted-dependencies-scripts.json) file can perform the postscripts execution. So, if you want to add a new dependency that needs to run a postscript, you should add it to the [trusted-dependencies-scripts.json](./trusted-dependencies-scripts.json) file list.
 
 # <img src="./docs/images/bullet.svg" width="14" /> Distribution
 
@@ -71,17 +75,17 @@ Now, look at the **package.json** file in the root directory, you should update 
 > **Note**: Check [Electron Builder docs](https://www.electron.build/cli) for more knowledge
 
 ```
-yarn build
+pnpm build
 ```
 
 ### For a specific one
 
 ```bash
-yarn build --mac
+pnpm build --mac
 # OR
-yarn build --win
+pnpm build --win
 # OR
-yarn build --linux
+pnpm build --linux
 ```
 
 The builded apps will be available on the `dist` folder.
@@ -93,7 +97,7 @@ To release your app on a GitHub release with `Windows`, `Mac` and `Linux` binari
 
 ```bash
 git pull
-yarn make:release
+pnpm make:release
 ```
 
 Then, enter the new version of your app, so it will produce the following binaries in a draft release from the action:
@@ -145,20 +149,11 @@ const window = createWindow({
   <tr>
     <td valign="bottom">
       <p align="center">
-        <a href="./docs/CREATING_WINDOWS.md">
-          <img src="./docs/images/creating-windows.svg" height="96" align="center" />
-        </a>
-        <br/><br/>
-        <a href="./docs/CREATING_WINDOWS.md">Creating Windows</a>
-      </p>
-    </td>
-    <td valign="bottom">
-      <p align="center">
-        <a href="./docs/ROUTING.md">
+        <a href="https://electron-router-dom.daltonmenezes.com/docs">
           <img src="./docs/images/routing.svg" height="96" align="center" />
         </a>
         <br/><br/>
-        <a href="./docs/ROUTING.md">Routing</a>
+        <a href="https://electron-router-dom.daltonmenezes.com/docs">Routing</a>
       </p>
     </td>
     <td valign="bottom">

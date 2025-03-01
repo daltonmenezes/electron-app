@@ -15,7 +15,3 @@ If you are trying to use this boilerplate with npm instead yarn on Windows, you 
 ## What should I do if the release action fails and the re-run failed jobs keep failing?
 Go to the releases page in your repository and delete the draft release, then execute the action again but in the `re-run all jobs` mode.
 
-## 🤔 How can I remove SASS support?
-```bash
-yarn remove sass 
-```
