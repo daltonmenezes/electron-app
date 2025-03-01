@@ -1,6 +1,6 @@
 import { ipcMain } from 'electron'
 
-import { WindowCreationByIPC, BrowserWindowOrNull } from 'shared/types'
+import type { WindowCreationByIPC, BrowserWindowOrNull } from 'shared/types'
 
 export function registerWindowCreationByIPC({
   channel,
@@ -9,13 +9,15 @@ export function registerWindowCreationByIPC({
 }: WindowCreationByIPC) {
   let window: BrowserWindowOrNull
 
-  ipcMain.handle(channel, (event) => {
+  ipcMain.handle(channel, event => {
     if (!createWindow || window) return
 
-    window = createWindow()
+    window = createWindow() as NonNullable<BrowserWindowOrNull>
 
-    window!.on('closed', () => (window = null))
+    window.on('closed', () => {
+      window = null
+    })
 
-    callback && callback(window!, event)
+    callback?.(window, event)
   })
 }

@@ -20,13 +20,17 @@ export async function makeAppSetup(createWindow: () => Promise<BrowserWindow>) {
 
   let window = await createWindow()
 
-  app.on('activate', async () =>
-    !BrowserWindow.getAllWindows().length
-      ? (window = await createWindow())
-      : BrowserWindow.getAllWindows()
-          ?.reverse()
-          .forEach((window) => window.restore())
-  )
+  app.on('activate', async () => {
+    const windows = BrowserWindow.getAllWindows()
+
+    if (!windows.length) {
+      window = await createWindow()
+    } else {
+      for (window of windows.reverse()) {
+        window.restore()
+      }
+    }
+  })
 
   app.on('web-contents-created', (_, contents) =>
     contents.on(

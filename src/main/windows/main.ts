@@ -1,5 +1,5 @@
 import { BrowserWindow } from 'electron'
-import { join } from 'path'
+import { join } from 'node:path'
 
 import { createWindow } from 'shared/lib/electron-app/factories/windows/create'
 import { ENVIRONMENT } from 'shared/constants/environment'
@@ -31,9 +31,11 @@ export async function MainWindow() {
     window.show()
   })
 
-  window.on('close', () =>
-    BrowserWindow.getAllWindows().forEach((window) => window.destroy())
-  )
+  window.on('close', () => {
+    for (const window of BrowserWindow.getAllWindows()) {
+      window.destroy()
+    }
+  })
 
   return window
 }

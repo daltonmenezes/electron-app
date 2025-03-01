@@ -1,4 +1,4 @@
-import { name, author as _author } from '~/package.json'
+import { author as _author, name } from '~/package.json'
 
 const author = _author.name ?? _author
 const authorInKebabCase = author.replace(/\s+/g, '-')

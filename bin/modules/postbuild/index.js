@@ -1,5 +1,5 @@
-const { writeFile } = require('fs/promises')
-const { resolve } = require('path')
+const { writeFile } = require('node:fs/promises')
+const { resolve } = require('node:path')
 
 const packageJSON = require('../../../package.json')
 const { getDevFolder } = require('../../utils')

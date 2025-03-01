@@ -1,5 +1,5 @@
-const { writeFile } = require('fs/promises')
-const { resolve } = require('path')
+const { writeFile } = require('node:fs/promises')
+const { resolve } = require('node:path')
 const open = require('open')
 
 const { extractOwnerAndRepoFromGitRemoteURL } = require('./utils')
@@ -40,15 +40,15 @@ async function makeRelease() {
       [
         `git commit -am v${newVersion}`,
         `git tag v${newVersion}`,
-        `git push`,
-        `git push --tags`,
+        'git push',
+        'git push --tags',
       ],
       {
         inherit: true,
       }
     )
 
-    const [repository] = exec([`git remote get-url --push origin`])
+    const [repository] = exec(['git remote get-url --push origin'])
     const ownerAndRepo = extractOwnerAndRepoFromGitRemoteURL(repository)
 
     console.log(
