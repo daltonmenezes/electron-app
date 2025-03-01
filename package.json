@@ -2,7 +2,7 @@
   "displayName": "My Awesome Electron App",
   "name": "my-awesome-electron-app",
   "description": "Your awesome app description",
-  "version": "2.0.6",
+  "version": "3.0.0",
   "main": "./node_modules/.dev/main/index.js",
   "resources": "src/resources",
   "author": {
@@ -27,11 +27,12 @@
     "electron-router-dom": "^1.0.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.14.2"
+    "react-router-dom": "^7.2.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.6.7",
     "@commitlint/config-conventional": "^17.6.7",
+    "@tailwindcss/vite": "^4.0.9",
     "@types/node": "^20.4.5",
     "@types/react": "^18.2.18",
     "@types/react-dom": "^18.2.7",
@@ -39,10 +40,10 @@
     "@typescript-eslint/parser": "^6.2.1",
     "@vitejs/plugin-react": "^4.0.4",
     "cross-env": "^7.0.3",
-    "electron": "^25.3.2",
-    "electron-builder": "^23.6.0",
+    "electron": "^34.3.0",
+    "electron-builder": "^25.1.8",
     "electron-extension-installer": "^1.2.0",
-    "electron-vite": "^1.0.27",
+    "electron-vite": "^3.0.0",
     "eslint": "^8.46.0",
     "eslint-config-prettier": "^8.9.0",
     "eslint-plugin-node": "^11.1.0",
@@ -55,9 +56,10 @@
     "rollup-plugin-inject-process-env": "^1.3.1",
     "sass": "^1.64.2",
     "semver": "^7.5.4",
+    "tailwindcss": "^4.0.9",
     "typescript": "^5.1.6",
-    "vite": "^4.4.8",
-    "vite-tsconfig-paths": "^4.2.0"
+    "vite": "^6.2.0",
+    "vite-tsconfig-paths": "^5.1.4"
   },
   "lint-staged": {
     "*.{js,ts}": [
@@ -66,5 +68,11 @@
   },
   "eslintIgnore": [
     "dist"
-  ]
+  ],
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "electron",
+      "electron-vite"
+    ]
+  }
 }
