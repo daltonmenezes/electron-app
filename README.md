@@ -44,7 +44,7 @@
   - 💙 TypeScript
   - 📦 Electron Vite
   - ✨ TailwindCSS
-  - 💫 Biome / EditorConfig / Husky / lint-staged / Commitlint
+  - 💫 Biome / EditorConfig / Husky / lint-staged
   - 📦 Electron Builder
   - 🔮 action-electron-builder
 
