@@ -1,4 +1,11 @@
+import { Terminal } from 'lucide-react'
 import { useEffect } from 'react'
+
+import {
+  Alert,
+  AlertTitle,
+  AlertDescription,
+} from 'renderer/components/ui/alert'
 
 // The "App" comes from the context bridge in preload/index.ts
 const { App } = window
@@ -9,15 +16,23 @@ export function MainScreen() {
     App.sayHelloFromBridge()
   }, [])
 
-  return (
-    <main className="flex flex-col items-center justify-center h-screen bg-black/80 backdrop-blur-3xl">
-      <h1 className="text-5xl text-secondary">
-        Hi, {App.username || 'there'}!
-      </h1>
+  const userName = App.username || 'there'
 
-      <h2 className="text-muted text-lg">
-        It's time to build something awesome! ✨
-      </h2>
+  return (
+    <main className="flex flex-col items-center justify-center h-screen bg-black/90 backdrop-blur-3xl">
+      <Alert className="mt-5 bg-transparent border-transparent text-accent w-fit">
+        <AlertTitle className="text-5xl text-teal-400">
+          Hi, {userName}!
+        </AlertTitle>
+
+        <AlertDescription className="flex items-center gap-2 text-lg">
+          <Terminal className="size-6 text-fuchsia-300" />
+
+          <span className="text-gray-400">
+            It's time to build something awesome!
+          </span>
+        </AlertDescription>
+      </Alert>
     </main>
   )
 }
