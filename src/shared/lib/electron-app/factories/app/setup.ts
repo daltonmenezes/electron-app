@@ -5,13 +5,16 @@ import {
   REACT_DEVELOPER_TOOLS,
 } from 'electron-extension-installer'
 
+import { ignoreConsoleWarnings } from '../../utils/ignore-console-warnings'
 import { ENVIRONMENT } from 'shared/constants/environment'
 import { PLATFORM } from 'shared/constants/platform'
 import { makeAppId } from 'shared/utils'
 
+ignoreConsoleWarnings(['Manifest version 2 is deprecated'])
+
 export async function makeAppSetup(createWindow: () => Promise<BrowserWindow>) {
   if (ENVIRONMENT.IS_DEV) {
-    await installExtension(REACT_DEVELOPER_TOOLS, {
+    await installExtension([REACT_DEVELOPER_TOOLS], {
       loadExtensionOptions: {
         allowFileAccess: true,
       },
