@@ -1,4 +1,4 @@
-exports.COLORS = {
+export const COLORS = {
   RED: '\x1b[31m',
   RESET: '\x1b[0m',
   GRAY: '\x1b[90m',

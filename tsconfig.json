@@ -33,6 +33,7 @@
   "include": [
     "src",
     "electron.vite.config.*",
+    "electron-builder.ts",
     "index.d.ts",
   ],
   "exclude": [

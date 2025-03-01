@@ -1,8 +1,11 @@
-const semver = require('semver')
+import semver from 'semver'
 
-const { COLORS } = require('../../../constants')
+import { COLORS } from '../constants/colors'
 
-exports.checkValidations = ({ version, newVersion }) => {
+export function checkValidations({
+  version,
+  newVersion,
+}: { version: string; newVersion: string }) {
   if (!newVersion) {
     console.log(`${COLORS.RED}No version entered${COLORS.RESET}`)
 

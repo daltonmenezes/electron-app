@@ -1,12 +1,13 @@
-const { writeFile } = require('node:fs/promises')
-const { resolve } = require('node:path')
-const open = require('open')
+import { writeFile } from 'node:fs/promises'
+import { resolve } from 'node:path'
+import open from 'open'
 
-const { extractOwnerAndRepoFromGitRemoteURL } = require('./utils')
-const { checkValidations } = require('./validations')
-const packageJSON = require('../../../package.json')
-const { question, exec } = require('../../utils')
-const { COLORS } = require('../../constants')
+import { extractOwnerAndRepoFromGitRemoteURL } from '../utils/extractors'
+import packageJSON from '../../../../../../package.json'
+import { checkValidations } from '../utils/validations'
+import { question } from '../utils/question'
+import { COLORS } from '../constants/colors'
+import { exec } from '../utils/exec'
 
 async function makeRelease() {
   console.clear()
@@ -64,7 +65,8 @@ async function makeRelease() {
     await open(`https://github.com/${ownerAndRepo}/actions`)
 
     console.log(`\n${COLORS.GREEN}Done!${COLORS.RESET}\n`)
-  } catch ({ message }) {
+    // biome-ignore lint/suspicious/noExplicitAny: <explanation>
+  } catch ({ message }: any) {
     console.log(`
     🛑 Something went wrong!\n
       👀 Error: ${message}

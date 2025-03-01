@@ -1,8 +1,8 @@
-const { writeFile } = require('node:fs/promises')
-const { resolve } = require('node:path')
+import { writeFile } from 'node:fs/promises'
+import { resolve } from 'node:path'
 
-const packageJSON = require('../../../package.json')
-const { getDevFolder } = require('../../utils')
+import packageJSON from '../../../../../../package.json'
+import { getDevFolder } from '../utils/path'
 
 async function createPackageJSONDistVersion() {
   const { main, scripts, resources, devDependencies, ...rest } = packageJSON
@@ -17,7 +17,8 @@ async function createPackageJSONDistVersion() {
       resolve(getDevFolder(main), 'package.json'),
       JSON.stringify(packageJSONDistVersion, null, 2)
     )
-  } catch ({ message }) {
+    // biome-ignore lint/suspicious/noExplicitAny: <explanation>
+  } catch ({ message }: any) {
     console.log(`
     🛑 Something went wrong!\n
       🧐 There was a problem creating the package.json dist version...\n

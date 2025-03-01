@@ -1,22 +1,23 @@
-const {
+import type { Configuration } from 'electron-builder'
+
+import {
   main,
   name,
   version,
   resources,
   description,
   displayName,
-  author: _author,
-} = require('./package.json')
+  author as _author,
+} from './package.json'
 
-const { getDevFolder } = require('./bin/utils')
+import { getDevFolder } from './src/shared/lib/electron-app/release/utils/path'
 
 const author = _author?.name ?? _author
 const currentYear = new Date().getFullYear()
 const authorInKebabCase = author.replace(/\s+/g, '-')
 const appId = `com.${authorInKebabCase}.${name}`.toLowerCase()
 
-/** @type {import('electron-builder').Configuration} */
-module.exports = {
+export default {
   appId,
   productName: displayName,
   copyright: `Copyright © ${currentYear} — ${author}`,
@@ -32,7 +33,7 @@ module.exports = {
   },
 
   dmg: {
-    icon: false,
+    icon: null,
   },
 
   linux: {
@@ -45,4 +46,4 @@ module.exports = {
     icon: `${resources}/build/icons/icon.ico`,
     target: ['nsis', 'portable', 'zip'],
   },
-}
+} satisfies Configuration

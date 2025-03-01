@@ -14,12 +14,12 @@
     "start": "electron-vite preview",
     "dev": "cross-env NODE_ENV=development electron-vite dev --watch",
     "compile:app": "electron-vite build",
-    "compile:packageJSON": "node ./bin/modules/postbuild/index.js",
+    "compile:packageJSON": "tsx ./src/shared/lib/electron-app/release/modules/prebuild.ts",
     "prebuild": "run-s compile:app compile:packageJSON",
     "build": "./node_modules/.bin/electron-builder",
     "postinstall": "run-s prebuild install:deps",
     "install:deps": "electron-builder install-app-deps",
-    "make:release": "node ./bin/modules/release/index.js",
+    "make:release": "tsx ./src/shared/lib/electron-app/release/modules/release.ts",
     "release": "electron-builder --publish always",
     "prepare": "husky install"
   },
@@ -47,6 +47,7 @@
     "rollup-plugin-inject-process-env": "^1.3.1",
     "semver": "^7.5.4",
     "tailwindcss": "^4.0.9",
+    "tsx": "^4.19.3",
     "typescript": "^5.1.6",
     "vite": "^6.2.0",
     "vite-tsconfig-paths": "^5.1.4"
