@@ -1,7 +1,5 @@
 import { contextBridge } from 'electron'
 
-import * as ipcs from './ipcs'
-
 declare global {
   interface Window {
     App: typeof API
@@ -9,7 +7,6 @@ declare global {
 }
 
 const API = {
-  ...ipcs,
   sayHelloFromBridge: () => console.log('\nHello from bridgeAPI! 👋\n\n'),
   username: process.env.USER,
 }

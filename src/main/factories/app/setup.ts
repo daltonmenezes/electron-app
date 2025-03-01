@@ -5,7 +5,8 @@ import {
   REACT_DEVELOPER_TOOLS,
 } from 'electron-extension-installer'
 
-import { PLATFORM, ENVIRONMENT } from 'shared/constants'
+import { ENVIRONMENT } from 'shared/constants/environment'
+import { PLATFORM } from 'shared/constants/platform'
 import { makeAppId } from 'shared/utils'
 
 export async function makeAppSetup(createWindow: () => Promise<BrowserWindow>) {
