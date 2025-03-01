@@ -2,11 +2,7 @@
   "compilerOptions": {
     "strict": true,
     "target": "esnext",
-    "lib": [
-      "esnext",
-      "dom",
-      "dom.iterable"
-    ],
+    "lib": ["esnext", "dom", "dom.iterable"],
     "jsx": "react-jsx",
     "importHelpers": true,
     "moduleResolution": "bundler",
@@ -22,21 +18,15 @@
     "noEmit": true,
     "baseUrl": ".",
     "paths": {
-      "*": [
-        "./src/*"
-      ],
-      "~/*": [
-        "./*"
-      ],
+      "*": ["./src/*"],
+      "~/*": ["./*"]
     }
   },
   "include": [
     "src",
     "electron.vite.config.*",
     "electron-builder.ts",
-    "index.d.ts",
+    "index.d.ts"
   ],
-  "exclude": [
-    "node_modules"
-  ],
+  "exclude": ["node_modules"]
 }

@@ -65,7 +65,6 @@ async function makeRelease() {
     await open(`https://github.com/${ownerAndRepo}/actions`)
 
     console.log(`\n${COLORS.GREEN}Done!${COLORS.RESET}\n`)
-    // biome-ignore lint/suspicious/noExplicitAny: <explanation>
   } catch ({ message }: any) {
     console.log(`
     🛑 Something went wrong!\n

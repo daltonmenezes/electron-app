@@ -124,11 +124,11 @@
     @apply bg-background text-foreground;
   }
 
-  html, body {
+  html,
+  body {
     background-size: cover;
     background-color: var(--color-primary);
-    background-position: center;
-    background-image: url('/illustration.svg');
+    background-image: url("/illustration.svg");
     background-position: 160px 125px;
     background-repeat: no-repeat;
 

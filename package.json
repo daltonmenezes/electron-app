@@ -62,8 +62,8 @@
   },
   "lint-staged": {
     "*.{js,ts}": [
-      "biome check --apply --organize-imports-enabled=false --no-errors-on-unmatched",
-      "biome lint --apply --no-errors-on-unmatched"
+      "biome check --write --organize-imports-enabled=false --no-errors-on-unmatched",
+      "biome lint --write --no-errors-on-unmatched"
     ]
   },
   "pnpm": {

@@ -25,7 +25,6 @@ async function createPackageJSONDistVersion() {
         JSON.stringify(trustedDependencies, null, 2)
       ),
     ])
-    // biome-ignore lint/suspicious/noExplicitAny: <explanation>
   } catch ({ message }: any) {
     console.log(`
     🛑 Something went wrong!\n
