@@ -1,4 +1,6 @@
-import { Router, Route } from 'electron-router-dom'
+import { Route } from 'react-router-dom'
+
+import { Router } from 'shared/lib/electron-router-dom'
 
 import { MainScreen, AboutScreen, AnotherScreen } from 'renderer/screens'
 

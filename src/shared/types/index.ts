@@ -1,13 +1,14 @@
-import {
-  BrowserWindow,
-  IpcMainInvokeEvent,
-  BrowserWindowConstructorOptions,
-} from 'electron'
+import type { BrowserWindow, IpcMainInvokeEvent } from 'electron'
+
+import type { registerRoute } from 'shared/lib/electron-router-dom'
 
 export type BrowserWindowOrNull = Electron.BrowserWindow | null
 
-export interface WindowProps extends BrowserWindowConstructorOptions {
-  id: string
+type Route = Parameters<typeof registerRoute>[0]
+
+export interface WindowProps extends Electron.BrowserWindowConstructorOptions {
+  id: Route['id']
+  query?: Route['query']
 }
 
 export interface WindowCreationByIPC {

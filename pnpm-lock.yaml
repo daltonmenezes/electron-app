@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       electron-router-dom:
-        specifier: ^1.0.5
-        version: 1.0.5(electron@34.3.0)(react-router-dom@7.2.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
+        specifier: ^2.1.0
+        version: 2.1.0(electron@34.3.0)(react-router-dom@7.2.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
       react:
         specifier: ^18.2.0
         version: 18.3.1
@@ -1725,12 +1725,12 @@ packages:
   electron-publish@25.1.7:
     resolution: {integrity: sha512-+jbTkR9m39eDBMP4gfbqglDd6UvBC7RLh5Y0MhFSsc6UkGHj9Vj9TWobxevHYMMqmoujL11ZLjfPpMX+Pt6YEg==}
 
-  electron-router-dom@1.0.5:
-    resolution: {integrity: sha512-xxzgteOD75kydC7jBQYRsVlXG6+wcZrB8SpB1CRbA42Zi5BaMEAFvIwbqCimSHfWWDYRiWy4eIB3ccRNLcNkIw==}
+  electron-router-dom@2.1.0:
+    resolution: {integrity: sha512-Ew8uRmraiDZKxnBXudBzYvfuc/+yj3AmQBqWp58AoT7tiiuyyO++XIN1lqsFleO/kpi7DANexztGShkgbbMB6g==}
     peerDependencies:
-      electron: '>=20.0'
-      react: '>=17.0'
-      react-router-dom: '>=6.0'
+      electron: '>=17.0'
+      react: '>=18.0'
+      react-router-dom: '>=6.22.3'
 
   electron-to-chromium@1.5.109:
     resolution: {integrity: sha512-AidaH9JETVRr9DIPGfp1kAarm/W6hRJTPuCnkF+2MqhF4KaAgRIcBc8nvjk+YMXZhwfISof/7WG29eS4iGxQLQ==}
@@ -5565,7 +5565,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  electron-router-dom@1.0.5(electron@34.3.0)(react-router-dom@7.2.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1):
+  electron-router-dom@2.1.0(electron@34.3.0)(react-router-dom@7.2.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1):
     dependencies:
       electron: 34.3.0
       react: 18.3.1
