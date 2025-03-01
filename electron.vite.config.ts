@@ -1,5 +1,6 @@
 import { defineConfig, externalizeDepsPlugin } from 'electron-vite'
-import { resolve, normalize, dirname } from 'path'
+import { resolve, normalize, dirname } from 'node:path'
+import tailwindcss from '@tailwindcss/vite'
 
 import injectProcessEnvPlugin from 'rollup-plugin-inject-process-env'
 import tsconfigPathsPlugin from 'vite-tsconfig-paths'
@@ -49,7 +50,7 @@ export default defineConfig({
       port: 4927,
     },
 
-    plugins: [tsconfigPaths, reactPlugin()],
+    plugins: [tsconfigPaths, tailwindcss(), reactPlugin()],
     publicDir: resolve(resources, 'public'),
 
     build: {
