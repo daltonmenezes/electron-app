@@ -31,8 +31,6 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
-    "@commitlint/cli": "^17.6.7",
-    "@commitlint/config-conventional": "^17.6.7",
     "@tailwindcss/vite": "^4.0.9",
     "@types/node": "^20.4.5",
     "@types/react": "^18.2.18",
