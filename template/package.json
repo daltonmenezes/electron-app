@@ -1,8 +1,8 @@
 {
-  "displayName": "My Awesome Electron App",
-  "name": "my-awesome-electron-app",
+  "displayName": "My Electron App",
+  "name": "my-electron-app",
   "description": "Your awesome app description",
-  "version": "3.0.0",
+  "version": "0.0.0",
   "main": "./node_modules/.dev/main/index.js",
   "resources": "src/resources",
   "author": {
@@ -10,6 +10,10 @@
     "email": "daltonmenezes@outlook.com"
   },
   "license": "MIT",
+  "packageManager": "pnpm@10.0.0",
+  "pnpm": {
+    "onlyBuiltDependenciesFile": "./trusted-dependencies-scripts.json"
+  },
   "scripts": {
     "start": "electron-vite preview",
     "predev": "run-s clean:dev",
@@ -17,7 +21,7 @@
     "compile:app": "electron-vite build",
     "compile:packageJSON": "tsx ./src/lib/electron-app/release/modules/prebuild.ts",
     "prebuild": "run-s clean:dev compile:app compile:packageJSON",
-    "build": "./node_modules/.bin/electron-builder",
+    "build": "pnpm electron-builder",
     "postinstall": "run-s prebuild install:deps",
     "install:deps": "electron-builder install-app-deps",
     "make:release": "tsx ./src/lib/electron-app/release/modules/release.ts",
@@ -61,8 +65,5 @@
     "typescript": "^5.1.6",
     "vite": "^6.2.0",
     "vite-tsconfig-paths": "^5.1.4"
-  },
-  "pnpm": {
-    "onlyBuiltDependenciesFile": "./trusted-dependencies-scripts.json"
   }
 }
