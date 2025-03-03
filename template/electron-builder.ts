@@ -10,7 +10,7 @@ import {
   author as _author,
 } from './package.json'
 
-import { getDevFolder } from './src/shared/lib/electron-app/release/utils/path'
+import { getDevFolder } from './src/lib/electron-app/release/utils/path'
 
 const author = _author?.name ?? _author
 const currentYear = new Date().getFullYear()

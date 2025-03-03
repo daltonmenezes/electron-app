@@ -18,12 +18,12 @@
     "noEmit": true,
     "baseUrl": ".",
     "paths": {
-      "*": ["./src/*"],
+      "*": ["src/*"],
       "~/*": ["./*"]
     }
   },
   "include": [
-    "src",
+    "./src",
     "electron.vite.config.*",
     "electron-builder.ts",
     "index.d.ts"

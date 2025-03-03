@@ -3,7 +3,7 @@ import { resolve } from 'node:path'
 import open from 'open'
 
 import { extractOwnerAndRepoFromGitRemoteURL } from '../utils/extractors'
-import packageJSON from '../../../../../../package.json'
+import packageJSON from '../../../../../package.json'
 import { checkValidations } from '../utils/validations'
 import { question } from '../utils/question'
 import { COLORS } from '../constants/colors'

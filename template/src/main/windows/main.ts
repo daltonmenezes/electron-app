@@ -1,7 +1,7 @@
 import { BrowserWindow } from 'electron'
 import { join } from 'node:path'
 
-import { createWindow } from 'shared/lib/electron-app/factories/windows/create'
+import { createWindow } from 'lib/electron-app/factories/windows/create'
 import { ENVIRONMENT } from 'shared/constants'
 import { displayName } from '~/package.json'
 

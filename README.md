@@ -57,7 +57,7 @@
 
 # <img src="./docs/images/bullet.svg" width="19" /> Installation
 ```bash
-npx degit daltonmenezes/electron-app project_name
+npx degit daltonmenezes/electron-app/template project_name
 ```
 ```bash
 cd project_name

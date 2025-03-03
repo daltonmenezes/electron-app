@@ -3,7 +3,7 @@ import { join } from 'node:path'
 
 import type { WindowProps } from 'shared/types'
 
-import { registerRoute } from 'shared/lib/electron-router-dom'
+import { registerRoute } from 'lib/electron-router-dom'
 
 export function createWindow({ id, ...settings }: WindowProps) {
   const window = new BrowserWindow(settings)
