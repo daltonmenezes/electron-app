@@ -17,6 +17,8 @@ const currentYear = new Date().getFullYear()
 const authorInKebabCase = author.replace(/\s+/g, '-')
 const appId = `com.${authorInKebabCase}.${name}`.toLowerCase()
 
+const artifactName = [`${name}-v${version}`, '-${os}.${ext}'].join('')
+
 export default {
   appId,
   productName: displayName,
@@ -28,22 +30,22 @@ export default {
   },
 
   mac: {
+    artifactName,
     icon: `${resources}/build/icons/icon.icns`,
     category: 'public.app-category.utilities',
-  },
-
-  dmg: {
-    icon: null,
+    target: ['zip', 'dmg', 'dir'],
   },
 
   linux: {
+    artifactName,
     category: 'Utilities',
     synopsis: description,
     target: ['AppImage', 'deb', 'pacman', 'freebsd', 'rpm'],
   },
 
   win: {
+    artifactName,
     icon: `${resources}/build/icons/icon.ico`,
-    target: ['nsis', 'portable', 'zip'],
+    target: ['zip', 'portable'],
   },
 } satisfies Configuration
