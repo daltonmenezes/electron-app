@@ -126,12 +126,6 @@
 
   html,
   body {
-    background-size: cover;
-    background-color: var(--color-primary);
-    background-image: url("/illustration.svg");
-    background-position: 160px 125px;
-    background-repeat: no-repeat;
-
     user-select: none;
     scroll-behavior: smooth;
     -webkit-app-region: no-drag;
