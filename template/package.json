@@ -22,8 +22,9 @@
     "install:deps": "electron-builder install-app-deps",
     "make:release": "tsx ./src/lib/electron-app/release/modules/release.ts",
     "release": "electron-builder --publish always",
-    "prepare": "husky install",
-    "clean:dev": "rimraf ./node_modules/.dev"
+    "clean:dev": "rimraf ./node_modules/.dev",
+    "lint": "biome lint --no-errors-on-unmatched",
+    "lint:fix": "biome lint --write --no-errors-on-unmatched"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",
@@ -50,7 +51,6 @@
     "electron-builder": "^25.1.8",
     "electron-extension-installer": "^1.2.0",
     "electron-vite": "^3.0.0",
-    "husky": "^8.0.3",
     "npm-run-all": "^4.1.5",
     "open": "8.4.2",
     "rimraf": "^6.0.1",
@@ -61,12 +61,6 @@
     "typescript": "^5.1.6",
     "vite": "^6.2.0",
     "vite-tsconfig-paths": "^5.1.4"
-  },
-  "lint-staged": {
-    "*.{js,ts}": [
-      "biome check --write --organize-imports-enabled=false --no-errors-on-unmatched",
-      "biome lint --write --no-errors-on-unmatched"
-    ]
   },
   "pnpm": {
     "onlyBuiltDependenciesFile": "./trusted-dependencies-scripts.json"

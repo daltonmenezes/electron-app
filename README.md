@@ -47,7 +47,7 @@
   - ✨ TailwindCSS v4
   - 🎨 shadcn/ui
   - 🍦 lucide-icons
-  - 💫 Biome / EditorConfig / Husky / lint-staged
+  - 💫 Biome / EditorConfig
   - 📦 Electron Builder
   - 🔮 action-electron-builder
 
