@@ -91,7 +91,7 @@ pnpm build --win
 pnpm build --linux
 ```
 
-The builded apps will be available on the `dist` folder.
+The builded apps will be available in the `dist` folder.
 
 # <img src="./docs/images/bullet.svg" width="14" /> Releasing
 > **Note**: to be able to perform `auto-updates` you will need a `code signed app`, for this purpose you will need to configure it by yourself, so check the [electron-builder](https://www.electron.build/code-signing) and [action-electron-builder](https://github.com/samuelmeuli/action-electron-builder#code-signing) docs please to get know how to do this.
@@ -103,7 +103,7 @@ git pull
 pnpm make:release
 ```
 
-Then, enter the new version of your app, so it will produce the following binaries in a draft release from the action:
+Then, enter the new version of your app, so it will produce the following binaries in a `draft release` from the action:
   - `Windows` &#8594; `zip (portable)`, `.exe`
   - `Mac` &#8594; `.zip (app)`, `.dmg`
   - `Linux` &#8594; `AppImage`, `freebsd`, `pacman`, `rpm`, `deb`
