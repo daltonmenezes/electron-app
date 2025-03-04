@@ -68,7 +68,7 @@ Now, look at the **package.json** file in the root directory, you should update 
 
 # <img src="./docs/images/bullet.svg" width="14" /> Adding new dependencies
 For security reasons, **pnpm** has the [onlyBuiltDependenciesFile](https://pnpm.io/package_json#pnpmonlybuiltdependenciesfile) property where only 
-dependencies listed in the [trusted-dependencies-scripts.json](./trusted-dependencies-scripts.json) file can perform the postscripts execution. So, if you want to add a new dependency that needs to run a postscript, you should add it to the [trusted-dependencies-scripts.json](./trusted-dependencies-scripts.json) file list.
+dependencies listed in the [trusted-dependencies-scripts.json](./template/trusted-dependencies-scripts.json) file can perform the postscripts execution. So, if you want to add a new dependency that needs to run a postscript, you should add it to the [trusted-dependencies-scripts.json](./template/trusted-dependencies-scripts.json) file list.
 
 # <img src="./docs/images/bullet.svg" width="14" /> Distribution
 
