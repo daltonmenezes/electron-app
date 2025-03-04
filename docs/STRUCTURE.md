@@ -2,6 +2,10 @@
 
 <br/>
 
+## src/lib
+
+A folder containing lib configurations/instances.
+
 ## src/main
 
 A folder containing the main process files and folders.
@@ -21,4 +25,4 @@ A folder containing public assets and assets for the build process like icons.
 
 ## src/shared
 
-A folder containing data shared between one or more processes, such as constants, configured libs, utilities, types, etc.
+A folder containing data shared between one or more processes, such as constants, utilities, types, etc.
