@@ -1,6 +1,6 @@
 <h1 align="center"><img src="./docs/images/bullet.svg" width="19" /> Electron App</h1>
 
-<p align="center">💅 The Electron app boilerplate with React v19, TypeScript v5, Tailwind v4, shadcn/ui, Electron Vite, Biome, <strong>GitHub Action releases</strong> and more.
+<p align="center">💅 An Electron app boilerplate with React v19, TypeScript v5, Tailwind v4, shadcn/ui, Electron Vite, Biome, <strong>GitHub Action releases</strong> and more.
   <br/><br/>
    <!-- GitHub -->
   <a href="https://github.com/sponsors/daltonmenezes">
