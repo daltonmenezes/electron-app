@@ -1,13 +1,6 @@
-<p align="center">
-  <img src="./images/understanding.svg" alt="a child with a lamp in the forest near a table with two chairs" width="60%" />
-</p>
-
-<br />
-<br />
-<br />
-
 <h1 align="center"><img src="./images/bullet.svg" width="20" /> Structure Overview</h1>
 
+<br/>
 
 ## src/main
 

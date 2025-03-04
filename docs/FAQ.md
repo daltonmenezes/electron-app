@@ -1,11 +1,3 @@
-<p align="center">
-  <img src="./images/faq.svg" alt="a woman in a park sitting on a bench with her legs crossed and holding her laptop and with a bag at her side" width="60%" />
-</p>
-
-<br />
-<br />
-<br />
-
 <h1 align="center"><img src="./images/bullet.svg" width="20" /> FAQ - Frequently Asked Questions</h1>
 
 ## How can I fix the `electron-builder install-app-deps Windows Script Host` error?

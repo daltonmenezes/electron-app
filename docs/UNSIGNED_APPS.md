@@ -1,11 +1,3 @@
-<p align="center">
-  <img src="./images/unsigned.svg" alt="" width="60%" />
-</p>
-
-<br />
-<br />
-<br />
-
 <h1 align="center"><img src="./images/bullet.svg" width="20" /> Running released unsigend apps</h1>
 
 ## Introduction
