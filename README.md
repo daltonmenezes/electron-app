@@ -32,7 +32,6 @@
   - 🚀 Auto reload for main and **Fast Refresh** for renderer process
   - 🎉 Window/Screen routing included
   - 😎 Preload (context bridge) already configured
-  <!-- - 🙀 IPC communication example included -->
   - 🔮 GitHub Action releases with `Windows`, `Mac` and `Linux` binaries
   - 🔒 Source Code Protection support
   - 🍪 Absolute paths support
@@ -94,7 +93,7 @@ pnpm build --linux
 The builded apps will be available in the `dist` folder.
 
 # <img src="./docs/images/bullet.svg" width="14" /> Releasing
-> **Note**: to be able to perform `auto-updates` you will need a `code signed app`, for this purpose you will need to configure it by yourself, so check the [electron-builder](https://www.electron.build/code-signing) and [action-electron-builder](https://github.com/samuelmeuli/action-electron-builder#code-signing) docs please to get know how to do this.
+> **Note**: to be able to perform `auto-updates` you will need a `code signed app`, for this purpose you will need to configure it by yourself, so check the [electron-builder](https://www.electron.build/code-signing) and [action-electron-builder](https://github.com/daltonmenezes/action-electron-builder#code-signing) docs please to get know how to do this.
 
 To release your app on a GitHub release with `Windows`, `Mac` and `Linux` binaries, you can perform the following commands:
 
@@ -148,7 +147,7 @@ const window = createWindow({
 ```
 
 # <img src="./docs/images/bullet.svg" width="19" /> Documents
-<table >
+<table>
   <tr>
     <td valign="bottom">
       <p align="center">
@@ -166,6 +165,17 @@ const window = createWindow({
         </a>
         <br/><br/>
         <a href="./docs/STRUCTURE.md">Structure Overview</a>
+      </p>
+    </td>
+    </tr>
+    <tr>
+    <td valign="bottom">
+      <p align="center">
+        <a href="./docs/UNSIGNED_APPS.md">
+          <img src="./docs/images/unsigned.svg" height="96" align="center" />
+        </a>
+        <br/><br/>
+        <a href="./docs/UNSIGNED_APPS.md">Running released unsigend apps</a>
       </p>
     </td>
     <td valign="bottom">
