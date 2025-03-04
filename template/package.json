@@ -1,0 +1,69 @@
+{
+  "displayName": "My Electron App",
+  "name": "my-electron-app",
+  "description": "Your awesome app description",
+  "version": "0.0.0",
+  "main": "./node_modules/.dev/main/index.js",
+  "resources": "src/resources",
+  "author": {
+    "name": "Dalton Menezes",
+    "email": "daltonmenezes@outlook.com"
+  },
+  "license": "MIT",
+  "packageManager": "pnpm@10.0.0",
+  "pnpm": {
+    "onlyBuiltDependenciesFile": "./trusted-dependencies-scripts.json"
+  },
+  "scripts": {
+    "start": "electron-vite preview",
+    "predev": "run-s clean:dev",
+    "dev": "cross-env NODE_ENV=development electron-vite dev --watch",
+    "compile:app": "electron-vite build",
+    "compile:packageJSON": "tsx ./src/lib/electron-app/release/modules/prebuild.ts",
+    "prebuild": "run-s clean:dev compile:app compile:packageJSON",
+    "build": "pnpm electron-builder",
+    "postinstall": "run-s prebuild install:deps",
+    "install:deps": "electron-builder install-app-deps",
+    "make:release": "tsx ./src/lib/electron-app/release/modules/release.ts",
+    "release": "electron-builder --publish always",
+    "clean:dev": "rimraf ./node_modules/.dev",
+    "lint": "biome lint --no-errors-on-unmatched",
+    "lint:fix": "biome lint --write --no-errors-on-unmatched"
+  },
+  "dependencies": {
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "electron-router-dom": "^2.1.0",
+    "lucide-react": "^0.477.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.2.0",
+    "tailwind-merge": "^3.0.2",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@tailwindcss/vite": "^4.0.9",
+    "@types/node": "^22.13.8",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@types/semver": "^7.5.8",
+    "@vitejs/plugin-react": "^4.0.4",
+    "code-inspector-plugin": "^0.20.1",
+    "cross-env": "^7.0.3",
+    "electron": "^34.3.0",
+    "electron-builder": "^25.1.8",
+    "electron-extension-installer": "^1.2.0",
+    "electron-vite": "^3.0.0",
+    "npm-run-all": "^4.1.5",
+    "open": "^10.1.0",
+    "rimraf": "^6.0.1",
+    "rollup-plugin-inject-process-env": "^1.3.1",
+    "semver": "^7.5.4",
+    "tailwindcss": "^4.0.9",
+    "tsx": "^4.19.3",
+    "typescript": "^5.1.6",
+    "vite": "^6.2.0",
+    "vite-tsconfig-paths": "^5.1.4"
+  }
+}

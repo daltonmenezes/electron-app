@@ -1,0 +1,28 @@
+{
+  "tailwindCSS.experimental.configFile": "src/renderer/globals.css",
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+
+  "editor.defaultFormatter": "biomejs.biome",
+  "biome.enabled": true,
+
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+
+  "[typescript]": {
+    "editor.formatOnSave": true
+  },
+
+  "[typescriptreact]": {
+    "editor.formatOnSave": true
+  },
+
+  "[json]": {
+    "editor.formatOnSave": true
+  }
+}
