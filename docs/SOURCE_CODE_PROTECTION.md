@@ -9,12 +9,12 @@ import { defineConfig, bytecodePlugin } from 'electron-vite'
 
 export default defineConfig({
   main: {
-    plugins: [tsconfigPaths, bytecodePlugin()]
+    plugins: [tsconfigPaths, bytecodePlugin({ transformArrowFunctions: false })]
   },
 
   preload: {
     // Note: you will get the following warning using bytecodePlugin in the preload script in production build: "The vm module of Node.js is deprecated in the renderer process and will be removed", is up to you to keep bytecodePlugin here. Also, keep following the Electron Vite docs for more updates about this plugin!
-    plugins: [tsconfigPaths, bytecodePlugin()]
+    plugins: [tsconfigPaths, bytecodePlugin({ transformArrowFunctions: false })]
   },
 
   renderer: {
