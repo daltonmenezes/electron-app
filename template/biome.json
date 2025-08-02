@@ -1,8 +1,5 @@
 {
   "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
-  "organizeImports": {
-    "enabled": true
-  },
   "formatter": {
     "enabled": true,
     "indentStyle": "space",
@@ -31,13 +28,11 @@
         "noArrayIndexKey": "info",
         "noDuplicateObjectKeys": "warn",
         "noExplicitAny": "off",
-        "noEmptyInterface": "off"
+        "noEmptyInterface": "off",
+        "noDuplicateProperties": "warn"
       },
       "style": {
         "noUselessElse": "warn"
-      },
-      "nursery": {
-        "noDuplicateProperties": "warn"
       },
       "correctness": {
         "noUnusedImports": "warn",
@@ -49,6 +44,9 @@
     }
   },
   "files": {
-    "ignore": ["dist", "node_modules"]
+    "experimentalScannerIgnores": [
+      "dist",
+      "node_modules"
+    ]
   }
 }
