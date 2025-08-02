@@ -10,11 +10,6 @@
   "editor.defaultFormatter": "biomejs.biome",
   "biome.enabled": true,
 
-  "editor.codeActionsOnSave": {
-    "source.organizeImports.biome": "explicit",
-    "source.fixAll.biome": "explicit"
-  },
-
   "[javascript]": {
     "editor.formatOnSave": true
   },
