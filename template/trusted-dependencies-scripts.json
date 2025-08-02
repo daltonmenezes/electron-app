@@ -2,6 +2,5 @@
   "electron",
   "electron-vite",
   "@biomejs/biome",
-  "@tailwindcss/oxide",
   "esbuild"
 ]
