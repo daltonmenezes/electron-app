@@ -1,1 +1,8 @@
-["electron", "electron-vite", "@biomejs/biome"]
+[
+  "esbuild",
+  "electron",
+  "electron-vite",
+  "@biomejs/biome",
+  "@tailwindcss/oxide",
+  "electron-winstaller"
+]

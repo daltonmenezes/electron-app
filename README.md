@@ -76,6 +76,9 @@ dependencies listed in the [trusted-dependencies-scripts.json](./template/truste
 
 # <img src="./docs/images/bullet.svg" width="14" /> Distribution
 
+> [!NOTE]
+> this section refers to local distribution, to release your app from GitHub Actions, see [Releasing](./docs/RELEASING.md) section.
+
 ### For all platforms
 
 > **Note**: Check [Electron Builder docs](https://www.electron.build/cli) for more knowledge

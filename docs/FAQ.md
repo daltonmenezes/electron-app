@@ -5,7 +5,9 @@ If you are trying to use this boilerplate with npm instead pnpm on Windows, you 
 - Take a look at [this comment](https://github.com/ficonsulting/RInno/issues/44#issuecomment-992299431) to fix it!
 
 ## What should I do if the release action fails and the re-run failed jobs keep failing?
-Go to the releases page in your repository and delete the draft release, then execute the action again but in the `re-run all jobs` mode.
+First, make sure you have the necessary permissions to run the action, see [Releasing](./RELEASING.md) section.
+
+Then, go to the releases page in your repository and delete the draft release, then execute the action again but in the `re-run all jobs` mode.
 
 ## What are Autofill errors in the terminal?
 If you see the following errors in the terminal, you can ignore them:

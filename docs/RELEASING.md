@@ -1,6 +1,14 @@
 <h1 align="center"><img src="./images/bullet.svg" width="20" /> Releasing</h1>
 
-> **Note**: to be able to perform `auto-updates` you will need a `code signed app`, for this purpose you will need to configure it by yourself, so check the [electron-builder](https://www.electron.build/code-signing) and [action-electron-builder](https://github.com/daltonmenezes/action-electron-builder#code-signing) docs please to get know how to do this.
+> [!NOTE]
+> to be able to perform `auto-updates` you will need a `code signed app`, for this purpose you will need to configure it by yourself, so check the [electron-builder](https://www.electron.build/code-signing) and [action-electron-builder](https://github.com/daltonmenezes/action-electron-builder#code-signing) docs please to get know how to do this.
+
+> [!WARNING]
+> to be able to perform releases from GitHub Actions, your repo **must have the necessary permissions**, so:
+> - Go to `/settings/actions` in your repo and:
+>   - in the `Actions permissions` section, select `Allow all actions and reusable workflows` option
+>   - in the `Workflow permissions` section, select `Read and write permissions` option
+>   - Save the changes
 
 To release your app on a GitHub release with `Windows`, `Mac` and `Linux` binaries, you can perform the following commands:
 

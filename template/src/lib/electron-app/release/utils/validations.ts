@@ -5,7 +5,10 @@ import { COLORS } from '../constants/colors'
 export function checkValidations({
   version,
   newVersion,
-}: { version: string; newVersion: string }) {
+}: {
+  version: string
+  newVersion: string
+}) {
   if (!newVersion) {
     console.log(`${COLORS.RED}No version entered${COLORS.RESET}`)
 
