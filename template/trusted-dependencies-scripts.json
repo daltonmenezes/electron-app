@@ -1,6 +1,8 @@
 [
+  "esbuild",
   "electron",
   "electron-vite",
   "@biomejs/biome",
-  "esbuild"
+  "@tailwindcss/oxide",
+  "electron-winstaller"
 ]
