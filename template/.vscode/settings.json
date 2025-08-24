@@ -1,16 +1,9 @@
 {
-  "tailwindCSS.experimental.configFile": "src/renderer/globals.css",
-  "files.associations": {
-    "*.css": "tailwindcss"
-  },
-  "editor.quickSuggestions": {
-    "strings": "on"
-  },
-
-  "editor.defaultFormatter": "biomejs.biome",
-  "biome.enabled": true,
-
   "[javascript]": {
+    "editor.formatOnSave": true
+  },
+
+  "[json]": {
     "editor.formatOnSave": true
   },
 
@@ -22,7 +15,21 @@
     "editor.formatOnSave": true
   },
 
-  "[json]": {
-    "editor.formatOnSave": true
-  }
+  "biome.enabled": true,
+
+  "editor.codeActionsOnSave": {
+    "source.fixAll.biome": "explicit"
+  },
+
+  "editor.defaultFormatter": "biomejs.biome",
+
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+
+  "tailwindCSS.experimental.configFile": "src/renderer/globals.css"
 }
